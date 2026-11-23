@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import Logo from "./Logo";
-import { productLinks } from "./nav";
+import { PORTAL_LOGIN_URL, productLinks } from "./nav";
 
 export default function Header() {
   const pathname = usePathname();
@@ -46,6 +46,9 @@ export default function Header() {
           <Logo size={28} /> insyder
         </Link>
         <nav className="nav" aria-label="Main">
+          <Link href="/about" className={pathname === "/about" ? "cur" : undefined} aria-current={cur("/about")}>
+            About
+          </Link>
           <div
             className="dd"
             ref={ddRef}
@@ -84,11 +87,11 @@ export default function Header() {
           <Link href="/solutions" className={pathname === "/solutions" ? "cur" : undefined} aria-current={cur("/solutions")}>
             Solutions by Teams
           </Link>
-          <Link href="/about" className={pathname === "/about" ? "cur" : undefined} aria-current={cur("/about")}>
-            About
-          </Link>
         </nav>
         <div className="hd-r">
+          <a className="btn b-ln" style={{ minHeight: "44px" }} href={PORTAL_LOGIN_URL} target="_blank" rel="noopener noreferrer">
+            Sign in
+          </a>
           <Link className="btn b-hi" style={{ minHeight: "44px" }} href="/demo">
             Book a demo
           </Link>
@@ -106,6 +109,7 @@ export default function Header() {
       </div>
       <nav className="mnav" id="mob-nav" aria-label="Mobile" hidden={!mobOpen}>
         <Link className="ml" href="/" aria-current={cur("/")}>Home</Link>
+        <Link className="ml" href="/about" aria-current={cur("/about")}>About</Link>
         <span className="grp">Product</span>
         {productLinks.map((l) => (
           <Link key={l.href} className="sub" href={l.href} aria-current={cur(l.href)}>
@@ -113,8 +117,8 @@ export default function Header() {
           </Link>
         ))}
         <Link className="ml" href="/solutions" aria-current={cur("/solutions")}>Solutions by Teams</Link>
-        <Link className="ml" href="/about" aria-current={cur("/about")}>About</Link>
-        <Link className="btn b-hi" href="/demo">Book a demo</Link>
+        <a className="btn b-ln" href={PORTAL_LOGIN_URL} target="_blank" rel="noopener noreferrer">Sign in</a>
+        <Link className="btn b-hi" href="/demo" style={{ marginTop: "10px" }}>Book a demo</Link>
       </nav>
     </header>
   );

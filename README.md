@@ -8,7 +8,7 @@ Insyder/
 │   ├── public/assets/logo.svg      logo
 │   └── src/
 │       ├── app/                    one folder per page + globals.css + layout.tsx
-│       └── components/             Header, Footer, Logo, DemoForm
+│       └── components/             Header, Footer, Logo, DemoForm, GetStarted, LegalPage
 └── backend/    Node.js + Express API (receives the "Book a demo" form)
     ├── src/server.js
     ├── src/routes/demoRequests.js
@@ -28,7 +28,7 @@ cp .env.example .env    # first time only
 npm run dev
 ```
 
-**Terminal 2: frontend** (http://localhost:3000)
+**Terminal 2: frontend** (http://localhost:3001)
 
 ```bash
 cd frontend
@@ -37,7 +37,12 @@ cp .env.example .env.local    # first time only
 npm run dev
 ```
 
-Open http://localhost:3000. The whole site works without the backend; only the
+Open http://localhost:3001.
+
+The **Sign in** button in the navbar opens the login page of the Insyder portal
+(separate repo: `insyder-portal`), which runs on http://localhost:3000. Start the
+portal too if you want that button to work locally. To point it somewhere else, set
+`NEXT_PUBLIC_PORTAL_URL` in `frontend/.env.local`. The whole site works without the backend; only the
 "Book a demo" form needs it.
 
 ## Pages
@@ -54,6 +59,8 @@ Open http://localhost:3000. The whole site works without the backend; only the
 | `/solutions` | Solutions by Teams |
 | `/about` | About |
 | `/demo` | Book a demo |
+| `/privacy` | Privacy policy |
+| `/terms` | Terms of service |
 
 ## API
 
@@ -65,8 +72,8 @@ Open http://localhost:3000. The whole site works without the backend; only the
 
 ## Settings
 
-- `frontend/.env.local`: `NEXT_PUBLIC_API_URL` (default `http://localhost:5000`)
-- `backend/.env`: `PORT` (default `5000`) and `CORS_ORIGIN` (default `http://localhost:3000`, comma-separated for more than one)
+- `frontend/.env.local`: `NEXT_PUBLIC_API_URL` (default `http://localhost:5000`) and `NEXT_PUBLIC_PORTAL_URL` (default `http://localhost:3000`, the portal app)
+- `backend/.env`: `PORT` (default `5000`) and `CORS_ORIGIN` (default `http://localhost:3001`, comma-separated for more than one)
 
 ## Production
 

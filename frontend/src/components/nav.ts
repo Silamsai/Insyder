@@ -6,3 +6,6 @@ export const productLinks = [
   { href: "/contact-profiling", label: "Contact profiling", desc: "Find who decides, then prepare for each person." },
   { href: "/outreach", label: "Outreach", desc: "Tasks, drafts and handoffs that carry the account’s context." },
 ];
+
+/** Login page of the Insyder portal app (separate repo: insyder-portal). */
+export const PORTAL_LOGIN_URL = `${(process.env.NEXT_PUBLIC_PORTAL_URL ?? "http://localhost:3000").replace(/\/$/, "")}/login`;

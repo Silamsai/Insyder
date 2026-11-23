@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Logo from "@/components/Logo";
+import GetStarted from "@/components/GetStarted";
 
 export const metadata: Metadata = {
   title: "Insyder — Account intelligence for revenue teams",
@@ -678,55 +679,7 @@ export default function HomePage() {
           </p>
         </div>
       </section>
-      <section className="sec" aria-labelledby="go-h" style={{ paddingTop: "0" }}>
-        <div className="w go">
-          <div>
-            <span className="kick">
-              Get started
-            </span>
-            <h2 className="h2" id="go-h">
-              Start with your website.
-            </h2>
-            <p className="lead">
-              Insyder reads it to suggest what you sell, who buys it and which signals to watch. You review every suggestion before it’s used.
-            </p>
-          </div>
-          <ol>
-            <li>
-              <b>
-                Add your website
-              </b>
-              <span>
-                Get a suggested offer, buyers, territory and signals for one research unit.
-              </span>
-            </li>
-            <li>
-              <b>
-                Choose your playbooks
-              </b>
-              <span>
-                Bundle the signals that matter and set monitors to re-check daily, weekly or monthly.
-              </span>
-            </li>
-            <li>
-              <b>
-                Invite your team
-              </b>
-              <span>
-                Add researchers, sales reviewers, SDRs, analysts and partners, and pick a workflow.
-              </span>
-            </li>
-            <li>
-              <b>
-                Connect your CRM
-              </b>
-              <span>
-                Link HubSpot or Salesforce and add suppressions so current clients are never prospected.
-              </span>
-            </li>
-          </ol>
-        </div>
-      </section>
+      <GetStarted />
       <section className="sec" aria-labelledby="fq-h" style={{ paddingTop: "0" }}>
         <div className="w fq">
           <div>
