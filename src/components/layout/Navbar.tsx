@@ -55,17 +55,17 @@ export function Navbar() {
     {
       title: "Accounts",
       desc: "Every account, its evidence, its brief and its path to sales.",
-      href: "/preview",
+      href: "/accounts",
     },
     {
       title: "Contact profiling",
       desc: "Find who decides, then prepare for each person.",
-      href: "/product",
+      href: "/contact-profiling",
     },
     {
       title: "Outreach",
       desc: "Tasks, drafts and handoffs that carry the account’s context.",
-      href: "/product",
+      href: "/outreach",
     },
   ];
 

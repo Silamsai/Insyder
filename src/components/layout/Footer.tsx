@@ -25,19 +25,19 @@ export function Footer() {
                 <Link href="/product" className="hover:text-white transition-colors">Product tour</Link>
               </li>
               <li>
-                <Link href="/preview" className="hover:text-white transition-colors">Discover</Link>
+                <Link href="/discover" className="hover:text-white transition-colors">Discover</Link>
               </li>
               <li>
-                <Link href="/product" className="hover:text-white transition-colors">Monitor</Link>
+                <Link href="/monitor" className="hover:text-white transition-colors">Monitor</Link>
               </li>
               <li>
-                <Link href="/preview" className="hover:text-white transition-colors">Accounts</Link>
+                <Link href="/accounts" className="hover:text-white transition-colors">Accounts</Link>
               </li>
               <li>
-                <Link href="/product" className="hover:text-white transition-colors">Contact profiling</Link>
+                <Link href="/contact-profiling" className="hover:text-white transition-colors">Contact profiling</Link>
               </li>
               <li>
-                <Link href="/product" className="hover:text-white transition-colors">Outreach</Link>
+                <Link href="/outreach" className="hover:text-white transition-colors">Outreach</Link>
               </li>
             </ul>
           </div>
@@ -47,7 +47,7 @@ export function Footer() {
             <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-3">Solutions</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/product" className="hover:text-white transition-colors">Solutions by Teams</Link>
+                <Link href="/solutions" className="hover:text-white transition-colors">Solutions by Teams</Link>
               </li>
             </ul>
           </div>
@@ -57,7 +57,7 @@ export function Footer() {
             <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-3">Company</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/book-demo" className="hover:text-white transition-colors">About</Link>
+                <Link href="/about" className="hover:text-white transition-colors">About</Link>
               </li>
               <li>
                 <Link href="/book-demo" className="hover:text-white transition-colors">Book a demo</Link>
