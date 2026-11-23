@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Insyder
 
-## Getting Started
+Marketing site for Insyder: account intelligence for revenue teams.
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Insyder/
+├── frontend/   Next.js 16 (App Router, React 19, react-icons)
+│   ├── public/assets/logo.svg      logo
+│   └── src/
+│       ├── app/                    one folder per page + globals.css + layout.tsx
+│       └── components/             Header, Footer, Logo, DemoForm
+└── backend/    Node.js + Express API (receives the "Book a demo" form)
+    ├── src/server.js
+    ├── src/routes/demoRequests.js
+    └── data/                       saved demo requests (demo-requests.json)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You need Node.js 20 or newer. Use two terminals.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Terminal 1: backend** (http://localhost:5000)
 
-## Learn More
+```bash
+cd backend
+npm install
+cp .env.example .env    # first time only
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+**Terminal 2: frontend** (http://localhost:3000)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+cd frontend
+npm install
+cp .env.example .env.local    # first time only
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open http://localhost:3000. The whole site works without the backend; only the
+"Book a demo" form needs it.
 
-## Deploy on Vercel
+## Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| URL | Page |
+| --- | --- |
+| `/` | Home |
+| `/product` | Product tour |
+| `/discover` | Discover |
+| `/monitor` | Monitor |
+| `/accounts` | Accounts |
+| `/contact-profiling` | Contact profiling |
+| `/outreach` | Outreach |
+| `/solutions` | Solutions by Teams |
+| `/about` | About |
+| `/demo` | Book a demo |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## API
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| GET | `/api/health` | Health check |
+| POST | `/api/demo-requests` | Save a demo request (`name`, `email` required; `company`, `role`, `website`, `message` optional) |
+| GET | `/api/demo-requests` | List saved demo requests |
+
+## Settings
+
+- `frontend/.env.local`: `NEXT_PUBLIC_API_URL` (default `http://localhost:5000`)
+- `backend/.env`: `PORT` (default `5000`) and `CORS_ORIGIN` (default `http://localhost:3000`, comma-separated for more than one)
+
+## Production
+
+```bash
+cd frontend && npm run build && npm start
+cd backend && npm start
+```
