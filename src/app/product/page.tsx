@@ -1,207 +1,453 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import {
-  Radar,
-  Users,
-  BrainCircuit,
-  FileText,
-  ShieldCheck,
-  CheckCircle2,
-  ArrowRight,
-  Zap,
-  Layers,
-  Sparkles,
-} from "lucide-react";
+import { InsyderDemoWorkspace } from "@/components/demo/InsyderDemoWorkspace";
+import { Check, ArrowRight, Sparkles } from "lucide-react";
 
 export default function ProductPage() {
-  const [activeEngine, setActiveEngine] = useState<"radar" | "enrichment" | "scoring" | "briefs">("radar");
-
-  const engines = {
-    radar: {
-      title: "Intent Radar Engine",
-      badge: "Real-Time Telemetry",
-      description:
-        "Continuously monitors buyer research surges across 10,000+ B2B publisher networks, SEC disclosures, patent filings, and hiring job boards.",
-      features: [
-        "First-party reverse IP website de-anonymization",
-        "Third-party topic consumption across technical review sites",
-        "Hiring velocity tracking for specific roles (e.g., AEs, DevOps, Security)",
-        "Competitor contract renewal window prediction",
-      ],
-      metric: "4x earlier signal detection than standard form fills",
-    },
-    enrichment: {
-      title: "Buying Committee Graph",
-      badge: "97%+ Accuracy",
-      description:
-        "Maps out the full 6-to-10 person enterprise buying committee, linking champions, technical evaluators, and budget sign-offs.",
-      features: [
-        "9-step real-time SMTP and phone carrier verification",
-        "Hierarchical org chart visualization with reporting lines",
-        "Direct work emails and verified mobile phone numbers",
-        "Automatic deduplication against your current CRM records",
-      ],
-      metric: "Zero email bounces with active SMTP handshakes",
-    },
-    scoring: {
-      title: "Propensity-to-Buy AI",
-      badge: "Custom ICP Model",
-      description:
-        "Prioritizes accounts using machine learning weights trained on your historical wins, recent tech changes, and engagement velocity.",
-      features: [
-        "Dynamic 1-100 Intent Score updated daily",
-        "Custom weighting for company size, industry, and funding stage",
-        "Negative signal discounting for frozen hiring or layoff signals",
-        "Automated tier-1, tier-2 account tiering into CRM views",
-      ],
-      metric: "2.8x higher win rate on 90+ scored accounts",
-    },
-    briefs: {
-      title: "1-Click Meeting Briefs",
-      badge: "Reps' Superpower",
-      description:
-        "Generates tailored 2-minute pre-call intelligence sheets delivered straight to Slack and Google Calendar 15 minutes before calls.",
-      features: [
-        "Target buyer's top 3 strategic priorities and recent LinkedIn posts",
-        "Proven conversation openers customized to the prospect's tech stack",
-        "High-probability objection handles and competitive differentiators",
-        "One-click copy to clipboard or sync to CRM call notes",
-      ],
-      metric: "Saves 40+ minutes of manual rep research per meeting",
-    },
-  };
-
-  const current = engines[activeEngine];
+  const navPills = [
+    { label: "Discover", href: "#discover" },
+    { label: "Monitor", href: "#monitor" },
+    { label: "Accounts", href: "#accounts" },
+    { label: "Contact profiling", href: "#contacts" },
+    { label: "Outreach", href: "#outreach" },
+  ];
 
   return (
-    <div className="bg-[#080d1a] text-white">
-      {/* Hero */}
-      <section className="relative overflow-hidden pt-16 pb-20 border-b border-white/10">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-teal-500/15 via-cyan-500/15 to-transparent rounded-full blur-[130px] pointer-events-none" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-400/10 px-3.5 py-1 text-xs font-semibold text-teal-300 border border-teal-400/20 mb-6">
-            <Sparkles className="h-3.5 w-3.5 text-teal-400" /> Insyder Platform Architecture
-          </span>
-          <h1 className="mx-auto max-w-4xl text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
-            The intelligence engine built for{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-300">
-              first-meeting mastery.
-            </span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-slate-300 leading-relaxed">
-            From discovering unlisted in-market demand to walking into meetings with executive-grade briefings, explore the four pillars powering Insyder.
-          </p>
-          <div className="mt-8 flex justify-center gap-4">
-            <Link
-              href="/preview"
-              className="rounded-full bg-gradient-to-r from-teal-400 to-cyan-400 px-6 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-teal-500/25 hover:scale-105 transition-all"
-            >
-              Explore Live Sandbox
+    <div className="bg-[#FAF9F5] min-h-screen text-slate-900">
+      {/* 1. Hero Section (Dark Navy #091424) */}
+      <section className="bg-[#091424] text-white pt-12 pb-24 border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 text-[11px] font-semibold tracking-wider text-slate-400 mb-6">
+            <Link href="/" className="hover:text-white transition-colors">
+              HOME
             </Link>
+            <span>/</span>
+            <span className="text-slate-200">PRODUCT</span>
+          </div>
+
+          {/* Eyebrow */}
+          <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#7fe3d6] block mb-3">
+            PRODUCT TOUR
+          </span>
+
+          {/* Headline */}
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08] max-w-4xl">
+            Everything your team needs between a signal and a first meeting.
+          </h1>
+
+          {/* Subtitle */}
+          <p className="mt-5 text-base sm:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed">
+            Five connected workflows, from finding accounts with a reason to talk to handing them to sales.
+          </p>
+
+          {/* CTA */}
+          <div className="mt-8">
             <Link
               href="/book-demo"
-              className="rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+              className="inline-flex items-center rounded-full bg-[#7fe3d6] hover:bg-[#6dd3c6] px-6 py-2.5 text-xs font-bold text-[#091424] transition-all hover:scale-105 active:scale-95 shadow-sm"
             >
-              Book a Tour →
+              Book a demo
             </Link>
           </div>
-        </div>
-      </section>
 
-      {/* Interactive Engine Tabs */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center mb-10 overflow-x-auto pb-2">
-          <div className="flex items-center gap-2 bg-white/5 p-1.5 rounded-2xl border border-white/10">
-            {[
-              { id: "radar", label: "Intent Radar", icon: <Radar className="h-4 w-4" /> },
-              { id: "enrichment", label: "Buying Committee", icon: <Users className="h-4 w-4" /> },
-              { id: "scoring", label: "Propensity AI", icon: <BrainCircuit className="h-4 w-4" /> },
-              { id: "briefs", label: "Meeting Briefs", icon: <FileText className="h-4 w-4" /> },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveEngine(tab.id as any)}
-                className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs sm:text-sm font-semibold transition-all whitespace-nowrap ${
-                  activeEngine === tab.id
-                    ? "bg-gradient-to-r from-teal-400 to-cyan-400 text-slate-950 shadow-md"
-                    : "text-slate-300 hover:text-white hover:bg-white/5"
-                }`}
+          {/* Anchor Navigation Pills */}
+          <div className="mt-10 flex flex-wrap items-center gap-2 border-t border-white/10 pt-6">
+            {navPills.map((pill) => (
+              <a
+                key={pill.label}
+                href={pill.href}
+                className="rounded-full border border-white/15 bg-white/5 hover:border-[#7fe3d6]/40 hover:text-white px-4 py-1.5 text-xs font-medium text-slate-300 transition-colors"
               >
-                {tab.icon}
-                <span>{tab.label}</span>
-              </button>
+                {pill.label}
+              </a>
             ))}
           </div>
-        </div>
 
-        {/* Engine Showcase Box */}
-        <div className="rounded-3xl border border-white/15 bg-[#0b132b] p-8 sm:p-12 shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-6 space-y-6">
-              <span className="rounded-full bg-teal-400/15 px-3 py-1 text-xs font-semibold text-teal-300 border border-teal-400/30">
-                {current.badge}
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white">{current.title}</h2>
-              <p className="text-base text-slate-300 leading-relaxed">{current.description}</p>
-
-              <div className="space-y-3 pt-2">
-                {current.features.map((f, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 text-sm text-slate-200">
-                    <CheckCircle2 className="h-4 w-4 text-teal-400 shrink-0 mt-0.5" />
-                    <span>{f}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="pt-4 border-t border-white/10 flex items-center gap-3">
-                <span className="text-2xl font-bold text-cyan-300">{current.metric}</span>
-              </div>
-            </div>
-
-            {/* Visual preview block */}
-            <div className="lg:col-span-6 rounded-2xl border border-white/10 bg-[#080d1a] p-6 space-y-4">
-              <div className="flex items-center justify-between border-b border-white/10 pb-3 text-xs text-slate-400">
-                <span className="font-mono">LIVE ENGINE TELEMETRY</span>
-                <span className="text-emerald-400 flex items-center gap-1">
-                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span> Real-time
-                </span>
-              </div>
-
-              <div className="space-y-3 text-xs">
-                <div className="rounded-lg bg-white/5 p-3 border border-white/5">
-                  <span className="text-teal-300 font-bold block mb-1">Incoming Intent Trigger</span>
-                  <p className="text-slate-300 font-mono text-[11px]">
-                    23 unique engineers at "Stripe" researched "Enterprise Kafka to Snowflake streaming"
-                  </p>
-                </div>
-                <div className="rounded-lg bg-white/5 p-3 border border-white/5">
-                  <span className="text-cyan-300 font-bold block mb-1">Buying Committee Matched</span>
-                  <p className="text-slate-300 font-mono text-[11px]">
-                    VP of Data Platform (Mark S.) & Head of Infra Engineering identified and verified
-                  </p>
-                </div>
-                <div className="rounded-lg bg-teal-950/30 p-3 border border-teal-400/20">
-                  <span className="text-teal-300 font-bold block mb-1">1-Click Brief Generated</span>
-                  <p className="text-slate-200 italic font-sans text-xs">
-                    "I noticed your team is actively evaluating event streaming into Snowflake. Most teams encounter schema drift bottlenecks..."
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* Floating Insyder Discover Demo Workspace */}
+          <div className="mt-14 max-w-6xl mx-auto shadow-[0_25px_80px_-15px_rgba(0,0,0,0.6)] rounded-2xl overflow-hidden border border-white/10">
+            <InsyderDemoWorkspace isHeroCompact={false} />
           </div>
         </div>
       </section>
 
-      {/* Security & Compliance */}
-      <section className="py-16 border-t border-white/10 bg-[#070c18]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <ShieldCheck className="h-10 w-10 text-teal-400 mx-auto mb-4" />
-          <h3 className="text-2xl font-bold text-white">Enterprise-Grade Security & Privacy</h3>
-          <p className="mt-2 text-sm text-slate-400 max-w-xl mx-auto">
-            SOC 2 Type II certified, GDPR & CCPA compliant. Zero personal tracking or invasive cookies.
-          </p>
+      {/* 2. Five Workflows Detail Sections (Alternating Layouts) */}
+      <div className="divide-y divide-slate-200">
+        {/* Section 1: Discover */}
+        <section id="discover" className="scroll-mt-24 py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              {/* Left Text */}
+              <div className="lg:col-span-7 space-y-4">
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-teal-800 block">
+                  DISCOVER
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+                  Find companies with a reason to talk.
+                </h2>
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                  Describe the accounts you want in plain language and get matches saved with their sources.
+                </p>
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-slate-700">
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Quick search or checked lists</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Playbooks of signals</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Review before spending</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Right Card */}
+              <div className="lg:col-span-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm space-y-4">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-3 text-xs">
+                  <span className="font-bold text-slate-900">Find & assign</span>
+                  <span className="text-slate-400 font-mono text-[11px]">Sample data</span>
+                </div>
+                <div className="space-y-3 text-xs">
+                  <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                    <div>
+                      <span className="font-bold text-slate-900 block">Northbridge Manufacturing</span>
+                      <span className="text-slate-500 text-[11px]">Expansion + IT vacancy</span>
+                    </div>
+                    <span className="rounded bg-teal-100 px-2 py-0.5 text-[10px] font-bold text-teal-800">
+                      Match
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                    <div>
+                      <span className="font-bold text-slate-900 block">Arkwright Components</span>
+                      <span className="text-slate-500 text-[11px]">Infrastructure hiring</span>
+                    </div>
+                    <span className="rounded bg-teal-100 px-2 py-0.5 text-[10px] font-bold text-teal-800">
+                      Match
+                    </span>
+                  </div>
+                </div>
+                <div className="pt-2 border-t border-slate-100">
+                  <Link
+                    href="/preview"
+                    className="inline-flex items-center text-xs font-bold text-teal-800 hover:text-slate-950 transition-colors"
+                  >
+                    <span>More on Discover →</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 2: Monitor (Alternating) */}
+        <section id="monitor" className="scroll-mt-24 py-20 bg-white/40">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              {/* Left Card */}
+              <div className="lg:col-span-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm space-y-4 order-2 lg:order-1">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-3 text-xs">
+                  <span className="font-bold text-slate-900">Signal monitors</span>
+                  <span className="text-slate-400 font-mono text-[11px]">Sample data</span>
+                </div>
+                <div className="space-y-3 text-xs">
+                  <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                    <div>
+                      <span className="font-bold text-slate-900 block">Infrastructure expansion</span>
+                      <span className="text-slate-500 text-[11px]">Daily</span>
+                    </div>
+                    <span className="rounded bg-teal-100 px-2 py-0.5 text-[10px] font-bold text-teal-800">
+                      Fresh signals
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                    <div>
+                      <span className="font-bold text-slate-900 block">Hiring demand</span>
+                      <span className="text-slate-500 text-[11px]">Weekly</span>
+                    </div>
+                    <span className="rounded bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800">
+                      Quota reached
+                    </span>
+                  </div>
+                </div>
+                <div className="pt-2 border-t border-slate-100">
+                  <Link
+                    href="/preview"
+                    className="inline-flex items-center text-xs font-bold text-teal-800 hover:text-slate-950 transition-colors"
+                  >
+                    <span>More on Monitor →</span>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right Text */}
+              <div className="lg:col-span-7 space-y-4 order-1 lg:order-2">
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-teal-800 block">
+                  MONITOR
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+                  Keep watching, so you don’t have to.
+                </h2>
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                  Monitors re-run playbooks on a schedule and log every new signal.
+                </p>
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-slate-700">
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Daily, weekly or monthly</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Filter detected signals</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Changes flow into the account feed</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3: Accounts */}
+        <section id="accounts" className="scroll-mt-24 py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              {/* Left Text */}
+              <div className="lg:col-span-7 space-y-4">
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-teal-800 block">
+                  ACCOUNTS
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+                  Every account, its evidence and its path to sales.
+                </h2>
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                  Watchlist, account brief, qualification, sales acceptance, pipeline and CRM.
+                </p>
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-slate-700">
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Signals with sources and dates</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Answers marked with their basis</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Decisions on record</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Right Card */}
+              <div className="lg:col-span-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm space-y-4">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-3 text-xs">
+                  <span className="font-bold text-slate-900">Northbridge Manufacturing</span>
+                  <span className="text-slate-400 font-mono text-[11px]">Sample data</span>
+                </div>
+                <div className="space-y-3 text-xs">
+                  <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                    <div>
+                      <span className="font-bold text-slate-900 block">New production facility</span>
+                      <span className="text-slate-500 text-[11px]">Expansion · 14 Oct 2026</span>
+                    </div>
+                    <span className="rounded bg-teal-100 px-2 py-0.5 text-[10px] font-bold text-teal-800">
+                      Reviewed
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                    <div>
+                      <span className="font-bold text-slate-900 block">Priority</span>
+                      <span className="text-slate-500 text-[11px]">Fit, timing and evidence</span>
+                    </div>
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-teal-700 text-teal-900 font-bold text-xs">
+                      86
+                    </span>
+                  </div>
+                </div>
+                <div className="pt-2 border-t border-slate-100">
+                  <Link
+                    href="/preview"
+                    className="inline-flex items-center text-xs font-bold text-teal-800 hover:text-slate-950 transition-colors"
+                  >
+                    <span>More on Accounts →</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4: Contact profiling (Alternating) */}
+        <section id="contacts" className="scroll-mt-24 py-20 bg-white/40">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              {/* Left Card */}
+              <div className="lg:col-span-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm space-y-4 order-2 lg:order-1">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-3 text-xs">
+                  <span className="font-bold text-slate-900">Decision makers</span>
+                  <span className="text-slate-400 font-mono text-[11px]">Sample data</span>
+                </div>
+                <div className="space-y-3 text-xs">
+                  <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                    <div>
+                      <span className="font-bold text-slate-900 block">Helen Marsh</span>
+                      <span className="text-slate-500 text-[11px]">Head of IT Infrastructure</span>
+                    </div>
+                    <span className="rounded bg-teal-100 px-2 py-0.5 text-[10px] font-bold text-teal-800">
+                      Hypothesis ready
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                    <div>
+                      <span className="font-bold text-slate-900 block">Owen Clarke</span>
+                      <span className="text-slate-500 text-[11px]">Operations Director</span>
+                    </div>
+                    <span className="rounded bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-600">
+                      Unverified
+                    </span>
+                  </div>
+                </div>
+                <div className="pt-2 border-t border-slate-100">
+                  <Link
+                    href="/preview"
+                    className="inline-flex items-center text-xs font-bold text-teal-800 hover:text-slate-950 transition-colors"
+                  >
+                    <span>More on Contact profiling →</span>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right Text */}
+              <div className="lg:col-span-7 space-y-4 order-1 lg:order-2">
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-teal-800 block">
+                  CONTACT PROFILING
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+                  Know who decides, and what to say.
+                </h2>
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                  Find decision makers with sources, then run a role hypothesis for each.
+                </p>
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-slate-700">
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Sourced, unverified until checked</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Roles to find</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Ten-section role hypotheses</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 5: Outreach */}
+        <section id="outreach" className="scroll-mt-24 py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              {/* Left Text */}
+              <div className="lg:col-span-7 space-y-4">
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-teal-800 block">
+                  OUTREACH
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+                  Every task carries its context.
+                </h2>
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                  Team tasks, clear instructions, drafts from reviewed evidence and partner handoffs.
+                </p>
+                <ul className="space-y-2.5 pt-2 text-xs sm:text-sm text-slate-700">
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>One list for the whole team</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Drafts for human review</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-teal-700 shrink-0 mt-0.5" />
+                    <span>Outcomes logged</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Right Card */}
+              <div className="lg:col-span-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm space-y-4">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-3 text-xs">
+                  <span className="font-bold text-slate-900">Tasks</span>
+                  <span className="text-slate-400 font-mono text-[11px]">Sample data</span>
+                </div>
+                <div className="space-y-3 text-xs">
+                  <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                    <div>
+                      <span className="font-bold text-slate-900 block">Northbridge Manufacturing</span>
+                      <span className="text-slate-500 text-[11px]">Research · due 22 Nov</span>
+                    </div>
+                    <span className="rounded bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800">
+                      In progress
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                    <div>
+                      <span className="font-bold text-slate-900 block">Halden Cold Chain</span>
+                      <span className="text-slate-500 text-[11px]">Email · due 24 Nov</span>
+                    </div>
+                    <span className="rounded bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-600">
+                      Open
+                    </span>
+                  </div>
+                </div>
+                <div className="pt-2 border-t border-slate-100">
+                  <Link
+                    href="/preview"
+                    className="inline-flex items-center text-xs font-bold text-teal-800 hover:text-slate-950 transition-colors"
+                  >
+                    <span>More on Outreach →</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* 3. Bottom Callout (Dark Navy) */}
+      <section className="bg-[#091424] py-20 text-white text-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+            See every step on accounts like yours.
+          </h2>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
+            <Link
+              href="/book-demo"
+              className="rounded-full bg-[#7fe3d6] hover:bg-[#6dd3c6] px-7 py-2.5 text-xs font-bold text-[#091424] shadow-sm transition-all hover:scale-105 active:scale-95"
+            >
+              Book a demo
+            </Link>
+
+            <Link
+              href="/preview"
+              className="rounded-full border border-white/20 bg-white/5 hover:bg-white/10 px-6 py-2.5 text-xs font-semibold text-white transition-colors"
+            >
+              See a role hypothesis
+            </Link>
+          </div>
         </div>
       </section>
     </div>
