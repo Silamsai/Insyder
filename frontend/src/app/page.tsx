@@ -45,8 +45,8 @@ export default function HomePage() {
                 <Image
                   src="/discover.png"
                   alt="Insyder Discover screen, Choose leads step: four companies found, each with its signal, date, sources and a score out of 100, ready to assign to a researcher."
-                  width={3446}
-                  height={1826}
+                  width={3440}
+                  height={1811}
                   sizes="(max-width: 1240px) 100vw, 1200px"
                   priority
                   style={{ display: "block", width: "100%", height: "auto" }}
