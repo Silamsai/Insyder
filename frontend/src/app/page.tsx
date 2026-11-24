@@ -43,10 +43,10 @@ export default function HomePage() {
             <div className="stage">
               <div className="frame-wrap">
                 <Image
-                  src="/discover.png"
+                  src="/discover-clean.png"
                   alt="Insyder Discover screen, Choose leads step: four companies found, each with its signal, date, sources and a score out of 100, ready to assign to a researcher."
-                  width={3440}
-                  height={1811}
+                  width={3438}
+                  height={1803}
                   sizes="(max-width: 1240px) 100vw, 1200px"
                   priority
                   style={{ display: "block", width: "100%", height: "auto" }}
