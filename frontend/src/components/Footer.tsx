@@ -43,7 +43,6 @@ export default function Footer() {
         </div>
         <div className="ft-base">
           <span>© {new Date().getFullYear()} Insyder</span>
-          <span>Examples use fictional sample data.</span>
         </div>
       </div>
     </footer>
