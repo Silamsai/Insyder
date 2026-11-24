@@ -63,7 +63,7 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .strip li{font-family:var(--font-schibsted),sans-serif;font-weight:700;font-size:21px;letter-spacing:-0.02em;color:#34404F}
 
 /* app frame */
-.frame-wrap{overflow-x:auto;border-radius:14px;box-shadow:0 50px 100px -40px rgba(13,27,42,.6);border:1px solid #CFC7B5;background:#F5F2EA}
+.frame-wrap{overflow:hidden;border-radius:14px;box-shadow:0 20px 50px -15px rgba(13,27,42,.15);border:1px solid rgba(13,27,42,.08);background:#F5F2EA}
 .dk .frame-wrap{border-color:rgba(255,255,255,.14)}
 .ap{display:grid;grid-template-columns:184px minmax(0,1fr);min-width:1040px;height:560px;font-size:13px;line-height:1.45;color:#0D1B2A}
 .ap.tall{height:600px}
