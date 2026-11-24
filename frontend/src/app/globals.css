@@ -49,7 +49,7 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .hero{padding:88px 0 0}
 .hero-c{text-align:center;max-width:960px;margin:0 auto}
 .pill-lab{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid rgba(127,211,203,.4);color:#7FD3CB;font-family:var(--font-geist-mono),monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.h1{font-family:var(--font-schibsted),sans-serif;font-weight:800;font-size:clamp(44px,6.2vw,88px);line-height:.96;letter-spacing:-0.05em;margin:22px 0 22px;color:#fff}
+.h1{font-family:var(--font-schibsted),sans-serif;font-weight:800;font-size:clamp(34px,4.5vw,62px);line-height:1.05;letter-spacing:-0.035em;margin:22px 0 22px;color:#fff}
 .h1 em{font-style:normal;color:#7FD3CB}
 .hero-c p.sub{font-size:20px;color:#B8C3CF;line-height:1.55;max-width:44em;margin:0 auto}
 .hero-c .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:30px}
