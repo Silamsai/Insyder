@@ -3,8 +3,6 @@
 import { useRef, useState } from "react";
 import { FiCheckCircle, FiAlertCircle } from "react-icons/fi";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:5000";
-
 type Status = { kind: "idle" } | { kind: "sending" } | { kind: "ok" } | { kind: "error"; text: string };
 
 export default function DemoForm() {
@@ -17,7 +15,7 @@ export default function DemoForm() {
     const data = Object.fromEntries(new FormData(form).entries());
     setStatus({ kind: "sending" });
     try {
-      const res = await fetch(`${API_URL}/api/demo-requests`, {
+      const res = await fetch("/api/demo-requests", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -29,7 +27,7 @@ export default function DemoForm() {
     } catch (err) {
       const text =
         err instanceof TypeError
-          ? "Could not reach the server. Is the backend running?"
+          ? "Could not reach the server. Check your connection and try again."
           : (err as Error).message;
       setStatus({ kind: "error", text });
     }

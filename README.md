@@ -13,7 +13,7 @@ Walk into every first meeting prepared.
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-20%2B-339933?logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-5-000000?logo=express&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)
 
 </div>
 
@@ -40,8 +40,10 @@ Walk into every first meeting prepared.
 
 ## About the project
 
-This repository contains the **marketing website for Insyder**, along with a small
-API that receives "Book a demo" requests.
+This repository contains the **marketing website for Insyder**. Its "Book a demo"
+form is handled by a server route inside the same Next.js app, which forwards each
+request to the Insyder portal, where the platform admin sees it under
+**Platform HQ → Demo requests**. There is no separate backend to deploy.
 
 Insyder helps sales teams sell into change. It spots companies going through the
 changes an offer depends on, shows the evidence behind each signal, finds the
@@ -67,40 +69,25 @@ The site presents the five connected workflows of the Insyder product:
 
 ## Tech stack
 
-**Frontend** (`frontend/`)
-
 - [Next.js 16](https://nextjs.org/) with the App Router
 - [React 19](https://react.dev/) and [TypeScript 5](https://www.typescriptlang.org/)
 - [react-icons](https://react-icons.github.io/react-icons/) for icons
 - Plain CSS (`src/app/globals.css`), no CSS framework
 - ESLint with `eslint-config-next`
-
-**Backend** (`backend/`)
-
-- [Node.js 20+](https://nodejs.org/) using ES modules
-- [Express 5](https://expressjs.com/) with [cors](https://github.com/expressjs/cors)
-- JSON file storage in `backend/data/` (no database needed; designed to be swapped for one later without changing the routes)
-- Built-in Node features for env files (`--env-file-if-exists`) and auto-reload (`--watch`), so there are no extra dev dependencies
+- A Next.js route handler (`src/app/api/demo-requests/route.ts`) for the demo form, which runs as a serverless function on Vercel
 
 ## Project structure
 
 ```
 Insyder/
-├── frontend/                     Next.js marketing site
-│   ├── public/
-│   │   ├── assets/logo.svg       Logo
-│   │   └── discover*.png         Product screenshots
-│   └── src/
-│       ├── app/                  One folder per page, plus layout.tsx and globals.css
-│       └── components/           Header, Footer, Logo, DemoForm, GetStarted, LegalPage, nav
-│
-└── backend/                      Express API
-    ├── src/
-    │   ├── server.js             App setup, CORS, health check, error handling
-    │   ├── store.js              JSON file storage
-    │   └── routes/
-    │       └── demoRequests.js   "Book a demo" endpoints and validation
-    └── data/                     Saved records (demo-requests.json, git-ignored)
+└── frontend/                                Next.js marketing site
+    ├── public/
+    │   ├── assets/logo.svg                  Logo
+    │   └── discover*.png                    Product screenshots
+    └── src/
+        ├── app/                             One folder per page, plus layout.tsx and globals.css
+        │   └── api/demo-requests/route.ts   "Book a demo" handler (server-side)
+        └── components/                      Header, Footer, Logo, DemoForm, GetStarted, LegalPage, nav
 ```
 
 ## Getting started
@@ -117,20 +104,9 @@ git clone <repository-url>
 cd Insyder
 ```
 
-### 2. Start the backend
+### 2. Start the site
 
-Runs on **http://localhost:5000**.
-
-```bash
-cd backend
-npm install
-cp .env.example .env      # first time only
-npm run dev
-```
-
-### 3. Start the frontend
-
-In a second terminal. Runs on **http://localhost:3001**.
+Runs on **http://localhost:3001**.
 
 ```bash
 cd frontend
@@ -143,33 +119,29 @@ Open **http://localhost:3001** in your browser.
 
 ### Notes
 
-- The whole site works without the backend. Only the **Book a demo** form needs it.
+- The **Book a demo** form needs the portal's API running (port 4000) and
+  `PORTAL_API_URL` and `DEMO_INTAKE_KEY` set in `frontend/.env.local`
+  (see [Configuration](#configuration)). Every other page works without it.
 - The **Sign in** button opens the login page of the Insyder portal (`insyder-portal`),
   which runs on http://localhost:3000. Start the portal as well if you want that button
   to work locally.
 
 ## Configuration
 
-Both apps read their settings from environment files. Copy the `.env.example` file
-in each folder to get started.
+Settings live in `frontend/.env.local` (copy `frontend/.env.example` to start).
+On Vercel, add the same variables under **Project → Settings → Environment Variables**.
 
-### Frontend: `frontend/.env.local`
+| Variable | Example | Visible in browser | Description |
+| --- | --- | --- | --- |
+| `NEXT_PUBLIC_PORTAL_URL` | `http://localhost:3000` | Yes | Base URL of the Insyder portal (used by **Sign in**) |
+| `PORTAL_API_URL` | `http://localhost:4000` | No | Portal API that receives demo requests |
+| `DEMO_INTAKE_KEY` | (random secret) | No | Shared secret; must match `DEMO_INTAKE_KEY` in the portal's backend |
 
-| Variable | Default | Description |
-| --- | --- | --- |
-| `NEXT_PUBLIC_API_URL` | `http://localhost:5000` | Base URL of the backend API |
-| `NEXT_PUBLIC_PORTAL_URL` | `http://localhost:3000` | Base URL of the Insyder portal (used by **Sign in**) |
-
-### Backend: `backend/.env`
-
-| Variable | Default | Description |
-| --- | --- | --- |
-| `PORT` | `5000` | Port the API listens on |
-| `CORS_ORIGIN` | `http://localhost:3001` | Allowed frontend origin(s), comma-separated for more than one |
+> Never give the last two a `NEXT_PUBLIC_` prefix: that would expose them to visitors.
 
 ## Available scripts
 
-### Frontend
+Run these inside `frontend/`.
 
 | Command | Description |
 | --- | --- |
@@ -177,13 +149,6 @@ in each folder to get started.
 | `npm run build` | Build the site for production |
 | `npm start` | Serve the production build on port 3001 |
 | `npm run lint` | Run ESLint |
-
-### Backend
-
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the API with auto-reload on file changes |
-| `npm start` | Start the API |
 
 ## Site pages
 
@@ -204,13 +169,11 @@ in each folder to get started.
 
 ## API reference
 
-Base URL: `http://localhost:5000`
+Served by the Next.js app itself, on the same domain as the site.
 
 | Method | Endpoint | Description |
 | --- | --- | --- |
-| `GET` | `/api/health` | Health check, returns `{ "status": "ok" }` |
-| `POST` | `/api/demo-requests` | Save a demo request |
-| `GET` | `/api/demo-requests` | List all saved demo requests |
+| `POST` | `/api/demo-requests` | Submit a demo request (forwarded to the portal) |
 
 ### `POST /api/demo-requests`
 
@@ -228,38 +191,43 @@ Base URL: `http://localhost:5000`
 **Example**
 
 ```bash
-curl -X POST http://localhost:5000/api/demo-requests \
+curl -X POST http://localhost:3001/api/demo-requests \
   -H "Content-Type: application/json" \
   -d '{"name":"Jane Doe","email":"jane@example.com","company":"Example Ltd"}'
 ```
 
 **Responses**
 
-- `201 Created`: `{ "ok": true, "id": "<uuid>" }`
+- `201 Created`: `{ "ok": true, "id": "<id>" }`
 - `400 Bad Request`: `{ "error": "<reason>" }` when validation fails
+- `502` / `503`: `{ "error": "<reason>" }` when the portal can't be reached or isn't configured
 
-Saved requests are written to `backend/data/demo-requests.json`.
+### How demo requests reach the admin panel
+
+```
+Website form  →  /api/demo-requests (validates)  →  portal API  POST /v1/intake/demo-requests
+                                                       (x-intake-key: DEMO_INTAKE_KEY)
+                                                             ↓
+                                            Portal database, table demo_requests
+                                                             ↓
+                                            Platform HQ → Demo requests (admin only)
+```
+
+The browser never talks to the portal directly; the shared key stays on the server.
 
 ## Deployment
 
-Build and run both apps in production mode:
+The site deploys to **Vercel** as a single project with **Root Directory** set to `frontend`.
+
+1. In the Vercel project, set `NEXT_PUBLIC_PORTAL_URL`, `PORTAL_API_URL` (the portal API's
+   live address) and `DEMO_INTAKE_KEY` (the same value as in the portal's backend).
+2. Redeploy, so the new variables take effect.
+
+To run a production build locally:
 
 ```bash
-# Frontend
 cd frontend
 npm install
 npm run build
 npm start
-
-# Backend
-cd backend
-npm install
-npm start
 ```
-
-Before deploying, set the environment variables for your domains, for example
-`NEXT_PUBLIC_API_URL` and `NEXT_PUBLIC_PORTAL_URL` on the frontend, and
-`CORS_ORIGIN` on the backend so it accepts requests from your live site.
-
-> `NEXT_PUBLIC_*` values are baked in at build time, so set them **before** running
-> `npm run build`.
