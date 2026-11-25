@@ -44,6 +44,7 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .mnav::-webkit-scrollbar{display:none;width:0;height:0}
 .mnav a.ml{display:block;color:#fff;text-decoration:none;font-size:15px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.08)}
 .mnav .btn{width:100%;margin-top:8px;min-height:38px;padding:8px 16px;font-size:14px}
+.hd .logo{font-size:26px}
 
 /* hero */
 .hero-bg{position:relative;background:#0D1B2A}
