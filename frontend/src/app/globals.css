@@ -40,11 +40,10 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .nav a:hover{color:#fff}
 .hd-r{margin-left:auto;display:flex;gap:10px}
 .mbtn{display:none;margin-left:auto;width:46px;height:46px;border-radius:10px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;align-items:center;justify-content:center;cursor:pointer}
-.mnav{padding:6px 20px 32px;border-top:1px solid rgba(255,255,255,.08);max-height:calc(100vh - 70px);max-height:calc(100dvh - 70px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.2) transparent}
-.mnav::-webkit-scrollbar{width:4px}
-.mnav::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:4px}
-.mnav a.ml{display:block;color:#fff;text-decoration:none;font-size:18px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
-.mnav .btn{width:100%;margin-top:18px}
+.mnav{padding:4px 16px 14px;border-top:1px solid rgba(255,255,255,.08);max-height:calc(100vh - 62px);max-height:calc(100dvh - 62px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;scrollbar-width:none;-ms-overflow-style:none}
+.mnav::-webkit-scrollbar{display:none;width:0;height:0}
+.mnav a.ml{display:block;color:#fff;text-decoration:none;font-size:15px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.mnav .btn{width:100%;margin-top:8px;min-height:38px;padding:8px 16px;font-size:14px}
 
 /* hero */
 .hero-bg{position:relative;background:#0D1B2A}
@@ -190,9 +189,14 @@ a{color:#7FD3CB}a:hover{color:#fff}
 
 /* mid cta */
 .mid{padding:72px 0}
-.mid-in{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;background:#E6F2EF;border:1px solid #BFDDD7;border-radius:16px;padding:36px 40px}
-.mid-in h2{font-family:var(--font-schibsted),sans-serif;font-weight:800;font-size:clamp(26px,2.8vw,38px);letter-spacing:-0.035em;line-height:1.1;margin:0;max-width:20em}
-.mid-in .row{display:flex;gap:10px;flex-wrap:wrap}
+.mid-in{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:#E6F2EF;border:1px solid #BFDDD7;border-radius:16px;padding:36px 40px}
+.mid-in h2{font-family:var(--font-schibsted),sans-serif;font-weight:800;font-size:clamp(18px,1.85vw,28px);letter-spacing:-0.03em;line-height:1.2;margin:0;max-width:none}
+.mid-in .row{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
+@media (min-width:920px){
+  .mid-in{flex-wrap:nowrap}
+  .mid-in h2{white-space:nowrap}
+  .mid-in .row{flex-wrap:nowrap}
+}
 
 /* roles */
 .roles{display:grid;grid-template-columns:300px minmax(0,1fr);gap:40px;margin-top:48px;align-items:start}
@@ -413,9 +417,9 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .dd-m span{display:block;font-size:13px;color:#566070;line-height:1.4;margin-top:2px}
 .dd-m .all{grid-column:1/-1;border-top:1px solid #E8E3D7;margin-top:6px;padding-top:14px;border-radius:0 0 10px 10px}
 .dd-m .all b{color:#0E6B67}
-.mnav .sub{display:block;color:#C3CED9;text-decoration:none;font-size:16px;padding:11px 0 11px 18px;border-bottom:1px solid rgba(255,255,255,.06)}
+.mnav .sub{display:block;color:#C3CED9;text-decoration:none;font-size:13.5px;padding:5px 0 5px 14px;border-bottom:1px solid rgba(255,255,255,.06)}
 .mnav .sub[aria-current="page"],.mnav a.ml[aria-current="page"]{color:#7FD3CB}
-.mnav .grp{display:block;color:#8FA2B5;font-family:var(--font-geist-mono),monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:16px 0 4px}
+.mnav .grp{display:block;color:#8FA2B5;font-family:var(--font-geist-mono),monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:8px 0 2px}
 .solgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:44px}
 .solcard{display:flex;flex-direction:column;gap:12px;background:#0D1B2A;border:1px solid #0D1B2A;border-radius:16px;padding:30px 28px 28px;text-decoration:none;color:#fff;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
 .solcard:hover,.solcard:focus-visible{border-color:#7FD3CB;color:#fff;transform:translateY(-6px);box-shadow:0 20px 40px -18px rgba(13,27,42,.55)}

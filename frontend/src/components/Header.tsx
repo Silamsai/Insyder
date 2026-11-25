@@ -130,7 +130,7 @@ export default function Header() {
         ))}
         <Link className="ml" href="/solutions" aria-current={cur("/solutions")}>Solutions by Teams</Link>
         <a className="btn b-ln" href={PORTAL_LOGIN_URL} target="_blank" rel="noopener noreferrer">Sign in</a>
-        <Link className="btn b-hi" href="/demo" style={{ marginTop: "10px" }}>Book a demo</Link>
+        <Link className="btn b-hi" href="/demo" style={{ marginTop: "6px" }}>Book a demo</Link>
       </nav>
     </header>
   );
