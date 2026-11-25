@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Insyder — Monitor",
@@ -80,56 +81,15 @@ export default function MonitorPage() {
               </ul>
             </div>
             <div>
-              <div className="pnl" role="img" aria-label="Signal monitors, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Signal monitors
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Infrastructure expansion
-                      <small>
-                        GB · last 90 days · 5 signals
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Active
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Multi-site IT support
-                      <small>
-                        GB · last 90 days · 3 signals
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Active
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Hiring demand
-                      <small>
-                        GB · last 90 days · 2 signals
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Active
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/signal-monitors.jpeg"
+                  alt="Signal monitors: Infrastructure expansion, Multi-site IT support, Hiring demand"
+                  width={1600}
+                  height={799}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -160,56 +120,15 @@ export default function MonitorPage() {
               </ul>
             </div>
             <div>
-              <div className="pnl" role="img" aria-label="Cadence, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Cadence
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Infrastructure expansion
-                      <small>
-                        Daily · last checked 20 Nov
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Fresh signals
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Multi-site IT support
-                      <small>
-                        Weekly · last checked 16 Nov
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        No changes
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Hiring demand
-                      <small>
-                        Weekly · last checked 17 Nov
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd a">
-                        Quota reached
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/monitor-cadence.jpeg"
+                  alt="Monitor cadence configuration and schedule status"
+                  width={1600}
+                  height={817}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>

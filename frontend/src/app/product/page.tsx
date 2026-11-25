@@ -90,49 +90,21 @@ export default function ProductPage() {
               </ul>
             </div>
             <div>
-              <div className="pnl" role="img" aria-label="Find & assign, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      {"Find & assign"}
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Northbridge Manufacturing
-                      <small>
-                        Expansion + IT vacancy
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Match
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Arkwright Components
-                      <small>
-                        Infrastructure hiring
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Match
-                      </span>
-                    </span>
-                  </div>
-                  <p style={{ marginTop: "12px", fontSize: "13px", color: "#566070" }}>
-                    <Link href="/discover" style={{ color: "#0E6B67", fontWeight: "600" }}>
-                      More on Discover →
-                    </Link>
-                  </p>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/find-and-assign.png"
+                  alt="Find & assign step-by-step workflow: Find leads, Choose leads, Assign researcher, Done"
+                  width={1402}
+                  height={718}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
+              <p style={{ marginTop: "12px", fontSize: "13px", color: "#566070" }}>
+                <Link href="/discover" style={{ color: "#0E6B67", fontWeight: "600" }}>
+                  More on Discover →
+                </Link>
+              </p>
             </div>
           </div>
           <div className="frow rev" id="monitor">
@@ -159,49 +131,21 @@ export default function ProductPage() {
               </ul>
             </div>
             <div>
-              <div className="pnl" role="img" aria-label="Signal monitors, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Signal monitors
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Infrastructure expansion
-                      <small>
-                        Daily
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Fresh signals
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Hiring demand
-                      <small>
-                        Weekly
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd a">
-                        Quota reached
-                      </span>
-                    </span>
-                  </div>
-                  <p style={{ marginTop: "12px", fontSize: "13px", color: "#566070" }}>
-                    <Link href="/monitor" style={{ color: "#0E6B67", fontWeight: "600" }}>
-                      More on Monitor →
-                    </Link>
-                  </p>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/signal-monitors.jpeg"
+                  alt="Signal monitors: Infrastructure expansion, Hiring demand with active status and signal counts"
+                  width={1600}
+                  height={799}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
+              <p style={{ marginTop: "12px", fontSize: "13px", color: "#566070" }}>
+                <Link href="/monitor" style={{ color: "#0E6B67", fontWeight: "600" }}>
+                  More on Monitor →
+                </Link>
+              </p>
             </div>
           </div>
           <div className="frow" id="accounts">
@@ -297,49 +241,21 @@ export default function ProductPage() {
               </ul>
             </div>
             <div>
-              <div className="pnl" role="img" aria-label="Decision makers, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Decision makers
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Helen Marsh
-                      <small>
-                        Head of IT Infrastructure
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Hypothesis ready
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Owen Clarke
-                      <small>
-                        Operations Director
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd a">
-                        Unverified
-                      </span>
-                    </span>
-                  </div>
-                  <p style={{ marginTop: "12px", fontSize: "13px", color: "#566070" }}>
-                    <Link href="/contact-profiling" style={{ color: "#0E6B67", fontWeight: "600" }}>
-                      More on Contact profiling →
-                    </Link>
-                  </p>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/decision-makers.jpeg"
+                  alt="Key decision makers (3 sourced): Jody Cushman, Kathleen Young, Branwen Cale with linked sources, email drafts, and LinkedIn notes."
+                  width={1609}
+                  height={977}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
+              <p style={{ marginTop: "12px", fontSize: "13px", color: "#566070" }}>
+                <Link href="/contact-profiling" style={{ color: "#0E6B67", fontWeight: "600" }}>
+                  More on Contact profiling →
+                </Link>
+              </p>
             </div>
           </div>
           <div className="frow" id="outreach">
