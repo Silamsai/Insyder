@@ -39,6 +39,18 @@ export default function Header() {
     if (ddOpen) ddRef.current?.querySelector<HTMLAnchorElement>(".dd-m a")?.focus();
   }, [ddOpen]);
 
+  // lock background scroll when mobile menu is open
+  useEffect(() => {
+    if (mobOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobOpen]);
+
   return (
     <header className="hd dk">
       <div className="w hd-in">

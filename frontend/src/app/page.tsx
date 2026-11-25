@@ -43,7 +43,7 @@ export default function HomePage() {
             <div className="stage">
               <div className="frame-wrap">
                 <Image
-                  src="/discover-clean.png"
+                  src="/discover-v3.png"
                   alt="Insyder Discover screen, Choose leads step: four companies found, each with its signal, date, sources and a score out of 100, ready to assign to a researcher."
                   width={3438}
                   height={1803}
@@ -272,45 +272,47 @@ export default function HomePage() {
                   </span>
                 </div>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "0" }}>
-                <div className="sec-view" style={{ borderRight: "1px solid #DCD5C6" }}>
-                  <div className="blk">
-                    <span className="lab">
-                      Opening approach
-                    </span>
-                    <p>
-                      “I saw the Kestrel Park announcement. Which part of getting the site ready is taking most of your attention?”
-                    </p>
+              <div className="rh-sample-scroll">
+                <div className="rh-sample-grid">
+                  <div className="sec-view" style={{ borderRight: "1px solid #DCD5C6" }}>
+                    <div className="blk">
+                      <span className="lab">
+                        Opening approach
+                      </span>
+                      <p>
+                        “I saw the Kestrel Park announcement. Which part of getting the site ready is taking most of your attention?”
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="sec-view" style={{ borderRight: "1px solid #DCD5C6" }}>
-                  <div className="blk">
-                    <span className="lab">
-                      Lead with
-                    </span>
-                    <p>
-                      A site network and backup design review.
-                    </p>
+                  <div className="sec-view" style={{ borderRight: "1px solid #DCD5C6" }}>
+                    <div className="blk">
+                      <span className="lab">
+                        Lead with
+                      </span>
+                      <p>
+                        A site network and backup design review.
+                      </p>
+                    </div>
+                    <div className="blk avoid">
+                      <span className="lab">
+                        Hold back
+                      </span>
+                      <ul>
+                        <li>
+                          A full hardware refresh proposal
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <div className="blk avoid">
-                    <span className="lab">
-                      Hold back
-                    </span>
-                    <ul>
-                      <li>
-                        A full hardware refresh proposal
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="sec-view">
-                  <div className="blk leave">
-                    <span className="lab">
-                      The question to leave them with
-                    </span>
-                    <p>
-                      “What has to be true on opening day for you to be confident the site will run?”
-                    </p>
+                  <div className="sec-view">
+                    <div className="blk leave">
+                      <span className="lab">
+                        The question to leave them with
+                      </span>
+                      <p>
+                        “What has to be true on opening day for you to be confident the site will run?”
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

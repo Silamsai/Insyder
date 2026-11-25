@@ -26,7 +26,7 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .sec{padding:120px 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font-family:var(--font-geist),sans-serif;font-weight:600;font-size:15px;line-height:1;text-decoration:none;cursor:pointer;border:1px solid transparent;white-space:nowrap;transition:background .15s ease,color .15s ease,border-color .15s ease}
 .b-hi{background:#7FD3CB;color:#0D1B2A}.b-hi:hover{background:#fff;color:#0D1B2A}
-.b-ln{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}.b-ln:hover{border-color:#fff;color:#fff}
+.b-ln{background:rgba(255,255,255,.05);color:#fff;border-color:rgba(255,255,255,.35)}.b-ln:hover{background:rgba(255,255,255,.12);border-color:#fff;color:#fff}
 .b-ink{background:#0D1B2A;color:#fff}.b-ink:hover{background:#0E6B67;color:#fff}
 .b-gh{background:transparent;color:#0D1B2A;border-color:#A99F8B}.b-gh:hover{border-color:#0D1B2A;color:#0D1B2A}
 
@@ -40,13 +40,16 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .nav a:hover{color:#fff}
 .hd-r{margin-left:auto;display:flex;gap:10px}
 .mbtn{display:none;margin-left:auto;width:46px;height:46px;border-radius:10px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;align-items:center;justify-content:center;cursor:pointer}
-.mnav{padding:6px 20px 22px;border-top:1px solid rgba(255,255,255,.08)}
+.mnav{padding:6px 20px 32px;border-top:1px solid rgba(255,255,255,.08);max-height:calc(100vh - 70px);max-height:calc(100dvh - 70px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.2) transparent}
+.mnav::-webkit-scrollbar{width:4px}
+.mnav::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:4px}
 .mnav a.ml{display:block;color:#fff;text-decoration:none;font-size:18px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
 .mnav .btn{width:100%;margin-top:18px}
 
 /* hero */
-.hero-bg{background:linear-gradient(180deg,#0D1B2A 0,#0D1B2A 64%,#F5F2EA 64%)}
-.hero{padding:88px 0 0}
+.hero-bg{position:relative;background:#0D1B2A}
+.hero-bg::after{content:"";position:absolute;left:0;right:0;bottom:0;height:300px;background:#F5F2EA;z-index:1;pointer-events:none}
+.hero{position:relative;z-index:2;padding:88px 0 0}
 .hero-c{text-align:center;max-width:960px;margin:0 auto}
 .pill-lab{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid rgba(127,211,203,.4);color:#7FD3CB;font-family:var(--font-geist-mono),monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .h1{font-family:var(--font-schibsted),sans-serif;font-weight:800;font-size:clamp(34px,4.5vw,62px);line-height:1.05;letter-spacing:-0.035em;margin:22px 0 22px;color:#fff}
@@ -160,6 +163,11 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .sec-b .n{font-family:var(--font-geist-mono),monospace;font-size:11px;color:#8A8270}
 .sec-b.on .n{color:#7FD3CB}
 .sec-view{padding:26px 30px 30px;min-width:0}
+.rh-sample-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.rh-sample-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+@media (max-width:820px){
+  .rh-sample-grid{grid-template-columns:repeat(3,minmax(240px,1fr));min-width:720px}
+}
 .sec-view h4{font-family:var(--font-schibsted),sans-serif;font-size:25px;font-weight:800;letter-spacing:-0.03em;margin:0 0 16px;line-height:1.15}
 .blk+.blk{margin-top:16px}
 .blk .lab{display:block;font-family:var(--font-geist-mono),monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#0E6B67;font-weight:500;margin-bottom:5px}
@@ -278,6 +286,7 @@ a{color:#7FD3CB}a:hover{color:#fff}
   .nav,.hd-r{display:none}
   .mbtn{display:inline-flex}
   .hero{padding-top:56px}
+  .hero-bg::after{height:160px}
   .stage{margin-top:40px}
   .ftabs{grid-template-columns:repeat(2,minmax(0,1fr))}
   .fblock,.rh-intro,.roles,.rl-panel,.go,.fq,.fin-opts{grid-template-columns:minmax(0,1fr);gap:32px}
@@ -300,6 +309,7 @@ a{color:#7FD3CB}a:hover{color:#fff}
   .strip li{font-size:18px}
 }
 @media (max-width:560px){
+  .hero-bg::after{height:80px}
   .ftabs,.rl-list,.trust,.ft-in{grid-template-columns:minmax(0,1fr)}
   .hero-c .btn,.mid-in .btn{flex:1 1 100%}
 }
