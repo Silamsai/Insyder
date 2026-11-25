@@ -493,3 +493,74 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .legal-body ul{margin:0 0 14px;padding-left:22px;color:#34404F;font-size:16.5px;line-height:1.65}
 .legal-body li{margin-bottom:6px}
 @media (max-width:980px){.legal{grid-template-columns:minmax(0,1fr);gap:32px}.legal-toc{position:static}}
+
+/* ===== Mobile / tablet: app-like layout ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.v2{overflow-x:clip}
+.v2 img{max-width:100%;height:auto}
+.anchors a,.btn,.ap-nav{-webkit-tap-highlight-color:transparent}
+
+/* tablet */
+@media (max-width:980px){
+  .hd-in{height:62px}
+  .ptbl-w{-webkit-overflow-scrolling:touch}
+  /* app mockup reflows instead of scrolling sideways */
+  .frame-wrap{overflow:hidden}
+  .ap,.ap.tall,.ap.hero-ap{grid-template-columns:minmax(0,1fr);min-width:0;height:auto}
+  .ap-side{flex-direction:row;align-items:center;gap:4px;padding:10px 12px;overflow-x:auto;scrollbar-width:none}
+  .ap-side::-webkit-scrollbar{display:none}
+  .ap-logo{padding:0 10px 0 4px;flex:none}
+  .ap-nav{flex:none;white-space:nowrap}
+  .ap-split{grid-template-columns:minmax(0,1fr)}
+  .ap-steps{flex-wrap:wrap;row-gap:8px}
+  .scroll-hint{display:none}
+}
+
+/* phone */
+@media (max-width:640px){
+  .v2{font-size:16px}
+  .w{padding:0 16px}
+  .sec,.fin{padding:64px 0}
+  .mid{padding:48px 0}
+  .cta-band{padding:64px 0}
+  .hero{padding-top:40px}
+  .hero-c p.sub,.pg-hero .sub{font-size:17px}
+  .lead,.frow .lead{font-size:16.5px}
+  .pg-hero{padding:44px 0 40px}
+  .pg-hero .h1{font-size:clamp(32px,9vw,42px)}
+  .h1{font-size:clamp(30px,8.4vw,40px)}
+  .h2{font-size:clamp(28px,8vw,36px)}
+  /* full-width, thumb-friendly buttons */
+  .hero-c .row,.pg-hero .row,.cta-band .row,.mid-in .row{flex-direction:column;align-items:stretch}
+  .hero-c .row .btn,.pg-hero .row .btn,.cta-band .row .btn,.mid-in .row .btn{width:100%;min-height:52px}
+  /* section links become a swipeable chip bar */
+  .anchors{flex-wrap:nowrap;overflow-x:auto;margin:32px -16px 0;padding:20px 16px 4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .anchors::-webkit-scrollbar{display:none}
+  .anchors a{flex:none}
+  /* screenshots go edge to edge like a phone screen */
+  .stage .frame-wrap,.frame-wrap{margin:0 -8px;border-radius:12px}
+  .frow{padding:44px 0;gap:24px}
+  .frow h2,.sol h2{font-size:clamp(26px,7.4vw,32px)}
+  .pnl{padding:16px;border-radius:12px}
+  .sol{padding:48px 0;gap:24px}
+  .strip{padding:40px 0 8px}
+  .strip ul{gap:8px 20px}
+  .strip li{font-size:16px}
+  .mid-in{padding:24px 18px;border-radius:14px}
+  .tc,.solcard,.gs-card,.fo{padding:22px 18px}
+  .related{padding:40px 0 64px}
+  .ft-base{flex-direction:column}
+  .demo-form{padding:22px 18px}
+  .md-h{padding:20px 18px 0}.md form{padding:16px 18px 20px}
+  .doc-top,.howto,.notebar{padding-left:18px;padding-right:18px}
+  .fqd summary,.fq-b{font-size:17px;padding:18px 0}
+  .legal-body h2{font-size:22px}
+  /* app mockup: phone-sized */
+  .ap-top{padding:0 14px}
+  .ap-subnav{padding:10px 14px 0}
+  .ap-body{padding:14px}
+  .ap-stp+.ap-stp::before{width:10px;margin-right:8px}
+  .ap-stp{padding-right:6px}
+  .res{grid-template-columns:18px minmax(0,1fr) 42px}
+  .res .mono{display:none}
+}
