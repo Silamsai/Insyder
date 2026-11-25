@@ -94,69 +94,15 @@ export default function DiscoverPage() {
               </ul>
             </div>
             <div>
-              <div className="pnl" role="img" aria-label="Describe the companies, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Describe the companies
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      What kind of companies?
-                      <small>
-                        UK manufacturers expanding production sites
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        Required
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Countries
-                      <small>
-                        United Kingdom
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        Set
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Industries
-                      <small>
-                        Manufacturing
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        Recommended
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Results
-                      <small>
-                        10 · 1 result = 1 research unit
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        10
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/describe-companies.png"
+                  alt="Describe the companies you're looking for: search type, playbook, criteria, countries"
+                  width={1002}
+                  height={676}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -264,69 +210,15 @@ export default function DiscoverPage() {
               </ul>
             </div>
             <div>
-              <div className="pnl" role="img" aria-label="Playbooks, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Playbooks
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Infrastructure expansion
-                      <small>
-                        Expansion · infra hiring · refresh · compute · procurement
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        6 accounts
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Hiring demand
-                      <small>
-                        Infrastructure roles at growing sites
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        4 accounts
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Multi-site IT support
-                      <small>
-                        Refresh and procurement signals
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        3 accounts
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Public tenders
-                      <small>
-                        New procurement notices
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        2 accounts
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/playbooks.png"
+                  alt="Signal playbooks: Infrastructure expansion, Hiring demand, Multi-site IT support"
+                  width={1002}
+                  height={502}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -357,69 +249,15 @@ export default function DiscoverPage() {
               </ul>
             </div>
             <div>
-              <div className="pnl" role="img" aria-label="Find & assign, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      {"Find & assign"}
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      1 · Find leads
-                      <small>
-                        Search reviewed and run
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Done
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      2 · Choose leads
-                      <small>
-                        4 of 10 selected
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd i">
-                        Current
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      3 · Assign researcher
-                      <small>
-                        Tom Reed
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        Next
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      4 · Done
-                      <small>
-                        Research tasks created
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        —
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/find-and-assign.png"
+                  alt="Find & assign step-by-step workflow: Find leads, Choose leads, Assign researcher, Done"
+                  width={1402}
+                  height={718}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
