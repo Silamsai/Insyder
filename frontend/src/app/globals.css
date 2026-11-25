@@ -1,8 +1,8 @@
 
 :root {
-  --font-geist: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-geist-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  --font-schibsted: "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-geist: var(--nf-geist), "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-geist-mono: var(--nf-geist-mono), "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-schibsted: var(--nf-schibsted), "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body{margin:0;background:#0D1B2A}
@@ -417,14 +417,13 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .mnav .sub[aria-current="page"],.mnav a.ml[aria-current="page"]{color:#7FD3CB}
 .mnav .grp{display:block;color:#8FA2B5;font-family:var(--font-geist-mono),monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:16px 0 4px}
 .solgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:44px}
-.solcard{display:flex;flex-direction:column;gap:10px;background:#FCFBF7;border:1px solid #DCD5C6;border-radius:14px;padding:26px 24px;text-decoration:none;color:#0D1B2A;transition:border-color .15s ease,transform .15s ease}
-.solcard:hover{border-color:#0E6B67;color:#0D1B2A}
-.solcard .n{font-family:var(--font-geist-mono),monospace;font-size:12px;color:#0E6B67;letter-spacing:.06em}
-.solcard b{font-family:var(--font-schibsted),sans-serif;font-size:23px;font-weight:800;letter-spacing:-0.025em}
-.solcard p{font-size:15px;color:#34404F;line-height:1.5}
-.solcard .go{margin-top:auto;padding-top:8px;font-weight:600;font-size:14.5px;color:#0E6B67}
-.solcard.dark{background:#0D1B2A;border-color:#0D1B2A;color:#fff}
-.solcard.dark p{color:#B8C3CF}.solcard.dark .n,.solcard.dark .go{color:#7FD3CB}
+.solcard{display:flex;flex-direction:column;gap:12px;background:#0D1B2A;border:1px solid #0D1B2A;border-radius:16px;padding:30px 28px 28px;text-decoration:none;color:#fff;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.solcard:hover,.solcard:focus-visible{border-color:#7FD3CB;color:#fff;transform:translateY(-6px);box-shadow:0 20px 40px -18px rgba(13,27,42,.55)}
+.solcard b{font-family:var(--font-schibsted),sans-serif;font-size:24px;font-weight:700;line-height:1.15;letter-spacing:-0.02em;color:#fff}
+.solcard p{margin:0 0 10px;font-family:var(--font-geist),sans-serif;font-size:15.5px;font-weight:400;line-height:1.6;color:#B8C3CF}
+.solcard .sc-btn{align-self:flex-start;margin-top:auto;display:inline-flex;align-items:center;min-height:42px;padding:0 20px;border:1px solid #7FD3CB;border-radius:999px;font-family:var(--font-geist),sans-serif;font-weight:600;font-size:14.5px;letter-spacing:-0.005em;color:#7FD3CB;background:transparent;transition:background-color .2s ease,color .2s ease}
+.solcard:hover .sc-btn,.solcard:focus-visible .sc-btn{background:#7FD3CB;color:#0D1B2A}
+@media (prefers-reduced-motion: reduce){.solcard,.solcard .sc-btn{transition:none}.solcard:hover,.solcard:focus-visible{transform:none}}
 .related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:56px 0 96px}
 .related a{display:block;border:1px solid #DCD5C6;border-radius:14px;padding:22px 24px;text-decoration:none;color:#0D1B2A;background:#FCFBF7}
 .related a:hover{border-color:#0E6B67;color:#0D1B2A}

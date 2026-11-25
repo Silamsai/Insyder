@@ -66,87 +66,69 @@ export default function SolutionsPage() {
           </h2>
           <div className="solgrid">
             <Link className="solcard" href="/discover">
-              <span className="n">
-                01
-              </span>
               <b>
                 Discover
               </b>
               <p>
                 Find companies with a reason to talk, from a plain-language search.
               </p>
-              <span className="go">
-                Explore discover →
+              <span className="sc-btn">
+                Explore discover
               </span>
             </Link>
             <Link className="solcard" href="/monitor">
-              <span className="n">
-                02
-              </span>
               <b>
                 Monitor
               </b>
               <p>
                 Saved playbooks that re-check on a schedule and log new signals.
               </p>
-              <span className="go">
-                Explore monitor →
+              <span className="sc-btn">
+                Explore monitor
               </span>
             </Link>
             <Link className="solcard" href="/accounts">
-              <span className="n">
-                03
-              </span>
               <b>
                 Accounts
               </b>
               <p>
                 Every account, its evidence, its brief and its path to sales.
               </p>
-              <span className="go">
-                Explore accounts →
+              <span className="sc-btn">
+                Explore accounts
               </span>
             </Link>
             <Link className="solcard" href="/contact-profiling">
-              <span className="n">
-                04
-              </span>
               <b>
                 Contact profiling
               </b>
               <p>
                 Find who decides, then prepare for each person.
               </p>
-              <span className="go">
-                Explore contact profiling →
+              <span className="sc-btn">
+                Explore contact profiling
               </span>
             </Link>
             <Link className="solcard" href="/outreach">
-              <span className="n">
-                05
-              </span>
               <b>
                 Outreach
               </b>
               <p>
                 Tasks, drafts and handoffs that carry the account’s context.
               </p>
-              <span className="go">
-                Explore outreach →
+              <span className="sc-btn">
+                Explore outreach
               </span>
             </Link>
-            <Link className="solcard dark" href="/contact-profiling">
-              <span className="n">
-                Spotlight
-              </span>
+            <Link className="solcard" href="/contact-profiling">
               <b>
                 Role hypothesis
               </b>
               <p>
                 A meeting-ready brief for each contact: what they control, how to open, what to ask and what to avoid.
               </p>
-              <span className="go">
-                See an example →
+              <span className="sc-btn">
+                See an example
               </span>
             </Link>
           </div>
