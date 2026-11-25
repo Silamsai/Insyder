@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = {
   title: "Insyder — Discover",
@@ -254,62 +255,15 @@ export default function DiscoverPage() {
           </div>
         </div>
       </section>
-      <section className="sec dk" aria-labelledby="st-h">
-        <div className="w">
-          <span className="kick">
-            How it works
-          </span>
-          <h2 className="h2" id="st-h">
-            From a sentence to an assigned lead in four steps.
-          </h2>
-          <div className="steps3">
-            <div>
-              <span>
-                01
-              </span>
-              <b>
-                Describe
-              </b>
-              <p>
-                Write who you’re looking for and pick a playbook.
-              </p>
-            </div>
-            <div>
-              <span>
-                02
-              </span>
-              <b>
-                Review
-              </b>
-              <p>
-                Check the search before research units are spent.
-              </p>
-            </div>
-            <div>
-              <span>
-                03
-              </span>
-              <b>
-                Choose
-              </b>
-              <p>
-                Select the leads worth researching from the results.
-              </p>
-            </div>
-            <div>
-              <span>
-                04
-              </span>
-              <b>
-                Assign
-              </b>
-              <p>
-                Hand them to a researcher, with a task for each.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowItWorks
+        title="From a sentence to an assigned lead in four steps."
+        steps={[
+          { title: "Describe", text: "Write who you’re looking for and pick a playbook.", icon: "describe" },
+          { title: "Review", text: "Check the search before research units are spent.", icon: "review" },
+          { title: "Choose", text: "Select the leads worth researching from the results.", icon: "choose" },
+          { title: "Assign", text: "Hand them to a researcher, with a task for each.", icon: "assign" },
+        ]}
+      />
       <section className="sec" aria-labelledby="fq-h">
         <div className="w fq">
           <div>

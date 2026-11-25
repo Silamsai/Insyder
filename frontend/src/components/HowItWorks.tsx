@@ -107,6 +107,72 @@ const icons = {
       <path d="M3 5v14a9 3 0 0 0 18 0V5" />
     </>
   ),
+  /** Chat bubble with lines: describe */
+  describe: (
+    <>
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      <path className="ic-l1" d="M7 8h8" />
+      <path className="ic-l2" d="M7 12h6" />
+    </>
+  ),
+  /** Eye: review */
+  review: (
+    <>
+      <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+      <circle className="ic-look" cx="12" cy="12" r="3" />
+    </>
+  ),
+  /** Pointer clicking: choose */
+  choose: (
+    <>
+      <g className="ic-rays">
+        <path d="M14 4.1 12 6M5.1 8l-2.9-.8M6 12l-1.9 2M7.2 2.2 8 5.1" />
+      </g>
+      <path className="ic-click" d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" />
+    </>
+  ),
+  /** Person with tick: assign */
+  assign: (
+    <>
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path className="ic-tick" d="m16 11 2 2 4-4" />
+    </>
+  ),
+  /** Open book: playbook */
+  playbook: (
+    <g className="ic-float">
+      <path d="M12 7v14" />
+      <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+    </g>
+  ),
+  /** Clock: cadence */
+  cadence: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path className="ic-hands" d="M12 6v6l4 2" />
+    </>
+  ),
+  /** Filter lines: review signals */
+  filter: (
+    <>
+      <path d="M3 6h18" />
+      <path className="ic-l1" d="M7 12h10" />
+      <path className="ic-l2" d="M10 18h4" />
+    </>
+  ),
+  /** Ringing bell: act on changes */
+  alert: (
+    <>
+      <g className="ic-bell">
+        <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+        <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+      </g>
+      <g className="ic-rays">
+        <path d="M22 8c0-2.3-.8-4.3-2-6M4 2C2.8 3.7 2 5.7 2 8" />
+      </g>
+    </>
+  ),
 } satisfies Record<string, ReactNode>;
 
 export type StepIcon = keyof typeof icons;

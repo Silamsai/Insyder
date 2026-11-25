@@ -252,14 +252,27 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .fo p{color:#B8C3CF;font-size:15.5px;line-height:1.5;margin-bottom:8px}
 
 /* footer */
-.ft{border-top:1px solid rgba(255,255,255,.1);padding:56px 0 40px;color:#8EA0B3;font-size:14px}
-.ft-in{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:40px}
-.ft h4{font-family:var(--font-geist-mono),monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7F93A8;margin:0 0 12px;font-weight:500}
-.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
-.ft a,.lnk{color:#E8EDF2;text-decoration:none;padding:6px 0;display:inline-block;background:none;border:0;font:inherit;cursor:pointer;text-align:left}
-.ft a:hover,.lnk:hover{color:#7FD3CB;text-decoration:underline}
+.ft{position:relative;overflow:hidden;padding:88px 0 36px;color:#9FB0C2;font-size:16px;border-top:1px solid rgba(255,255,255,.08)}
+.ft::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(127,211,203,.55),transparent)}
+.ft::after{content:"";position:absolute;top:-260px;left:-160px;width:640px;height:520px;background:radial-gradient(closest-side,rgba(127,211,203,.08),transparent);pointer-events:none}
+.ft .w{position:relative;z-index:1}
+.ft-in{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:56px}
+.ft-brand{display:flex;flex-direction:column;align-items:flex-start;gap:0}
+.ft-brand .logo{font-size:34px;gap:12px}
+.ft-tag{margin:28px 0 36px !important;max-width:22em;font-size:17px;line-height:1.6;color:#B8C3CF}
+.ft-cta{min-height:46px;padding:0 24px;font-size:15px}
+.ft-col h4{font-family:var(--font-schibsted),sans-serif;font-size:16px;font-weight:700;letter-spacing:-0.01em;color:#fff;margin:6px 0 20px}
+.ft-col ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.ft-col a{display:inline-flex;align-items:center;gap:6px;color:#B8C3CF;text-decoration:none;font-family:var(--font-geist),sans-serif;font-size:16px;line-height:1.4;transition:color .18s ease,transform .18s ease}
+.ft-col a:hover,.ft-col a:focus-visible{color:#7FD3CB;transform:translateX(3px)}
+.lnk{color:#E8EDF2;text-decoration:none;padding:6px 0;display:inline-block;background:none;border:0;font:inherit;cursor:pointer;text-align:left}
+.lnk:hover{color:#7FD3CB;text-decoration:underline}
 .ph{font-style:italic;color:#8EA0B3;padding:6px 0;display:inline-block}
-.ft-base{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
+.ft-base{margin-top:72px;padding-top:28px;border-top:1px solid rgba(255,255,255,.10);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:14.5px;color:#8EA0B3}
+.ft-legal{display:flex;gap:28px}
+.ft-legal a{color:#B8C3CF;text-decoration:none;transition:color .18s ease}
+.ft-legal a:hover,.ft-legal a:focus-visible{color:#7FD3CB}
+@media (prefers-reduced-motion:reduce){.ft-col a{transition:none}.ft-col a:hover{transform:none}}
 
 /* modal */
 .ov{position:fixed;inset:0;z-index:80;background:rgba(5,12,20,.7);display:flex;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
@@ -304,13 +317,16 @@ a{color:#7FD3CB}a:hover{color:#fff}
   .sec{padding:84px 0}
   .mid-in{padding:28px 24px}
   .fq-a{padding-right:0}
-  .ft-in{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ft-in{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+  .ft-brand{grid-column:1/-1}
+  .ft{padding:72px 0 32px}
   .scroll-hint{display:block}
   .strip li{font-size:18px}
 }
 @media (max-width:560px){
   .hero-bg::after{height:80px}
-  .ftabs,.rl-list,.trust,.ft-in{grid-template-columns:minmax(0,1fr)}
+  .ftabs,.rl-list,.trust{grid-template-columns:minmax(0,1fr)}
+  .ft-in{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 24px}
   .hero-c .btn,.mid-in .btn{flex:1 1 100%}
 }
 
@@ -338,9 +354,6 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .about-split .ftxt .lead{margin-bottom:12px}
 /* Button row inside generic sections (e.g. About dark band) */
 .sec .row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-/* Footer logo: keep the same type styling as the navbar logo */
-.ft a.logo{display:inline-flex;align-items:center;gap:10px;line-height:1;font-family:var(--font-schibsted),sans-serif;font-weight:700;font-size:23px;letter-spacing:-0.045em;color:#fff;padding:0;text-decoration:none}
-.ft a.logo:hover{color:#fff;text-decoration:none}
 .checks{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
 .checks li{display:flex;gap:10px;font-size:16px;line-height:1.5;color:#34404F}
 .checks li::before{content:"";width:6px;height:11px;flex:none;margin:4px 6px 0 4px;border-right:2.5px solid #0E6B67;border-bottom:2.5px solid #0E6B67;transform:rotate(45deg)}
@@ -443,7 +456,7 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .sp-ic .ic-bulb{transform-origin:center bottom}
 .sp-ic .ic-pen{transform-origin:left bottom}
 .sp-ic .ic-tick{stroke-dasharray:9;stroke-dashoffset:0}
-.sp-ic .ic-l1,.sp-ic .ic-l2{stroke-dasharray:8;stroke-dashoffset:0}
+.sp-ic .ic-l1,.sp-ic .ic-l2{stroke-dasharray:10;stroke-dashoffset:0}
 .sp-ic .ic-line{stroke-dasharray:9;stroke-dashoffset:0}
 .steps-pro li:hover .ic-lens{animation:icScan 1.6s ease-in-out infinite}
 .steps-pro li:hover .ic-tick{animation:icTick 1.4s ease-out infinite}
@@ -459,7 +472,20 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .steps-pro li:hover .ic-line{animation:icLine 1.4s ease-in-out infinite}
 .steps-pro li:hover .ic-s1{animation:icLight 1.4s ease-in-out infinite}
 .steps-pro li:hover .ic-s2{animation:icLight 1.4s ease-in-out .25s infinite}
-@keyframes icWriteL{0%{stroke-dashoffset:8}50%,100%{stroke-dashoffset:0}}
+.sp-ic .ic-hands{transform-box:view-box;transform-origin:12px 12px}
+.sp-ic .ic-bell{transform-origin:center top}
+.sp-ic .ic-click{transform-origin:left top}
+.steps-pro li:hover .ic-look{animation:icLook 1.8s ease-in-out infinite}
+.steps-pro li:hover .ic-click{animation:icClick 1.2s ease-in-out infinite}
+.steps-pro li:hover .ic-float{animation:icFloat 1.6s ease-in-out infinite}
+.steps-pro li:hover .ic-hands{animation:icSpin 2s linear infinite}
+.steps-pro li:hover .ic-bell{animation:icRing 1.2s ease-in-out infinite}
+@keyframes icLook{0%,100%{transform:translateX(0)}25%{transform:translateX(-2.5px)}75%{transform:translateX(2.5px)}}
+@keyframes icClick{0%,100%{transform:scale(1)}40%{transform:scale(.85)}60%{transform:scale(1.05)}}
+@keyframes icFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2.5px)}}
+@keyframes icSpin{to{transform:rotate(360deg)}}
+@keyframes icRing{0%,60%,100%{transform:rotate(0)}10%{transform:rotate(14deg)}20%{transform:rotate(-12deg)}30%{transform:rotate(9deg)}40%{transform:rotate(-6deg)}50%{transform:rotate(3deg)}}
+@keyframes icWriteL{0%{stroke-dashoffset:10}50%,100%{stroke-dashoffset:0}}
 @keyframes icPush{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
 @keyframes icDrop{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
 @keyframes icPen{0%,100%{transform:rotate(0) translate(0,0)}25%{transform:rotate(-6deg) translate(1px,-1px)}50%{transform:rotate(0) translate(2px,0)}75%{transform:rotate(-4deg) translate(1px,-1px)}}
@@ -661,7 +687,8 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .mid-in{padding:24px 18px;border-radius:14px}
   .tc,.solcard,.gs-card,.fo{padding:22px 18px}
   .related{padding:40px 0 64px}
-  .ft-base{flex-direction:column}
+  .ft-base{flex-direction:column-reverse;align-items:flex-start;margin-top:48px}
+  .ft{padding:56px 0 28px}
   .demo-form{padding:22px 18px}
   .md-h{padding:20px 18px 0}.md form{padding:16px 18px 20px}
   .doc-top,.howto,.notebar{padding-left:18px;padding-right:18px}

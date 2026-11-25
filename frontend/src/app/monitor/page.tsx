@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = {
   title: "Insyder — Monitor",
@@ -285,62 +286,15 @@ export default function MonitorPage() {
           </div>
         </div>
       </section>
-      <section className="sec dk" aria-labelledby="st-h">
-        <div className="w">
-          <span className="kick">
-            How it works
-          </span>
-          <h2 className="h2" id="st-h">
-            Set it once, then let it run.
-          </h2>
-          <div className="steps3">
-            <div>
-              <span>
-                01
-              </span>
-              <b>
-                Pick a playbook
-              </b>
-              <p>
-                Choose the signals and territory to watch.
-              </p>
-            </div>
-            <div>
-              <span>
-                02
-              </span>
-              <b>
-                Set the cadence
-              </b>
-              <p>
-                Daily, weekly or monthly, within your quota.
-              </p>
-            </div>
-            <div>
-              <span>
-                03
-              </span>
-              <b>
-                Review signals
-              </b>
-              <p>
-                Filter what was found by type, monitor or account.
-              </p>
-            </div>
-            <div>
-              <span>
-                04
-              </span>
-              <b>
-                Act on changes
-              </b>
-              <p>
-                Material changes flow into the account feed.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowItWorks
+        title="Set it once, then let it run."
+        steps={[
+          { title: "Pick a playbook", text: "Choose the signals and territory to watch.", icon: "playbook" },
+          { title: "Set the cadence", text: "Daily, weekly or monthly, within your quota.", icon: "cadence" },
+          { title: "Review signals", text: "Filter what was found by type, monitor or account.", icon: "filter" },
+          { title: "Act on changes", text: "Material changes flow into the account feed.", icon: "alert" },
+        ]}
+      />
       <section className="sec" aria-labelledby="fq-h">
         <div className="w fq">
           <div>
