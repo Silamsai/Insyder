@@ -56,10 +56,10 @@ export default function ProductPage() {
           <div style={{ paddingTop: "72px" }}>
             <div className="frame-wrap">
               <Image
-                src="/discover-v3.png"
+                src="/discover.png"
                 alt="Insyder Discover screen, Choose leads step: four companies found, each with its signal, date, sources and a score out of 100, ready to assign to a researcher."
-                width={3438}
-                height={1803}
+                width={3446}
+                height={1826}
                 sizes="(max-width: 1240px) 100vw, 1200px"
                 priority
                 style={{ display: "block", width: "100%", height: "auto" }}
