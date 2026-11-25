@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Insyder — Contact profiling",
@@ -80,59 +81,15 @@ export default function ContactProfilingPage() {
               </ul>
             </div>
             <div>
-              <div className="pnl" role="img" aria-label="Decision makers, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Decision makers
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Helen Marsh
-                      <small>
-                        Head of IT Infrastructure · source linked
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd a">
-                        Unverified
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Owen Clarke
-                      <small>
-                        Operations Director · source linked
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd a">
-                        Unverified
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Ruth Adeyemi
-                      <small>
-                        Procurement Lead · source linked
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd a">
-                        Unverified
-                      </span>
-                    </span>
-                  </div>
-                  <p style={{ marginTop: "12px", fontSize: "13px", color: "#566070" }}>
-                    Results are unverified: check before use.
-                  </p>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/decision-makers.jpeg"
+                  alt="Key decision makers (3 sourced): Jody Cushman, Kathleen Young, Branwen Cale with linked sources, email drafts, and LinkedIn notes."
+                  width={1609}
+                  height={977}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -160,43 +117,15 @@ export default function ContactProfilingPage() {
               </ul>
             </div>
             <div>
-              <div className="pnl" role="img" aria-label="Roles to find, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Roles to find
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Site project manager
-                      <small>
-                        Kestrel Park
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        Open
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Head of Procurement
-                      <small>
-                        Found · Ruth Adeyemi
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Filled
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/roles-to-find.png"
+                  alt="Roles to find and key decision makers"
+                  width={1498}
+                  height={1050}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -227,74 +156,15 @@ export default function ContactProfilingPage() {
               </ul>
             </div>
             <div>
-              <div className="pnl" role="img" aria-label="Role hypothesis · Helen Marsh, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Role hypothesis · Helen Marsh
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Meeting context
-                      <small>
-                        Purpose, posture and central tension
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        01
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      How to run the meeting
-                      <small>
-                        Opening, questions and the ask
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        06
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Objections
-                      <small>
-                        Likely pushback and how to respond
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        07
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      The question to leave them with
-                      <small>
-                        What has to be true on opening day…
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        09
-                      </span>
-                    </span>
-                  </div>
-                  <p style={{ marginTop: "12px", fontSize: "13px", color: "#566070" }}>
-                    <Link href="/contact-profiling" style={{ color: "#0E6B67", fontWeight: "600" }}>
-                      See the full example →
-                    </Link>
-                  </p>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/role-hypothesis.jpeg"
+                  alt="Contact Role Hypothesis for Gavin Lyngdoh"
+                  width={1600}
+                  height={733}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -322,56 +192,23 @@ export default function ContactProfilingPage() {
               </ul>
             </div>
             <div>
-              <div className="pnl" role="img" aria-label="Meeting note, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Meeting note
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Call booked
-                      <small>
-                        4 Dec, via the partner
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Added
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Partner covers
-                      <small>
-                        Cabling only
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Added
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Hypothesis
-                      <small>
-                        Regenerated with the note
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd i">
-                        Sharpened
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{
+                padding: "0",
+                overflow: "hidden",
+                background: "transparent",
+                border: "0",
+                boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)",
+                maxWidth: "320px",
+                margin: "0 auto"
+              }}>
+                <Image
+                  src="/meeting-note.png"
+                  alt="Tell us about the meeting form for role hypothesis"
+                  width={767}
+                  height={989}
+                  sizes="(max-width: 980px) 100vw, 320px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
