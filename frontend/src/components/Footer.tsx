@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="w">
         <div className="ft-in">
           <div>
-            <Link className="logo" href="/" aria-label="Insyder home" style={{ fontSize: "20px" }}>
-              <Logo size={24} /> insyder
+            <Link className="logo" href="/" aria-label="Insyder home">
+              <Logo size={28} /> insyder
             </Link>
             <p style={{ marginTop: "12px", maxWidth: "22em", lineHeight: "1.5" }}>
               Account intelligence for revenue teams. Know who to call, and what to say.

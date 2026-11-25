@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = {
   title: "Insyder — Outreach",
@@ -11,18 +12,9 @@ export default function OutreachPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / "}
-            <Link href="/solutions">
-              Solutions
-            </Link>
-            {" / Outreach"}
-          </p>
+         
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
-            Solutions · Outreach
+          Outreach
           </span>
           <h1 className="h1" id="pg-h">
             Every task carries its context.
@@ -362,62 +354,15 @@ export default function OutreachPage() {
           </div>
         </div>
       </section>
-      <section className="sec dk" aria-labelledby="st-h">
-        <div className="w">
-          <span className="kick">
-            How it works
-          </span>
-          <h2 className="h2" id="st-h">
-            From accepted account to logged outcome.
-          </h2>
-          <div className="steps3">
-            <div>
-              <span>
-                01
-              </span>
-              <b>
-                Receive
-              </b>
-              <p>
-                Accepted accounts arrive as tasks with context.
-              </p>
-            </div>
-            <div>
-              <span>
-                02
-              </span>
-              <b>
-                Prepare
-              </b>
-              <p>
-                Read the brief and the contact’s role hypothesis.
-              </p>
-            </div>
-            <div>
-              <span>
-                03
-              </span>
-              <b>
-                Draft
-              </b>
-              <p>
-                Write outreach from reviewed evidence.
-              </p>
-            </div>
-            <div>
-              <span>
-                04
-              </span>
-              <b>
-                Log
-              </b>
-              <p>
-                Record the outcome, or hand off to a partner.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowItWorks
+        title="From accepted account to logged outcome."
+        steps={[
+          { title: "Receive", text: "Accepted accounts arrive as tasks with context.", icon: "receive" },
+          { title: "Prepare", text: "Read the brief and the contact’s role hypothesis.", icon: "prep" },
+          { title: "Draft", text: "Write outreach from reviewed evidence.", icon: "draft" },
+          { title: "Log", text: "Record the outcome, or hand off to a partner.", icon: "log" },
+        ]}
+      />
       <section className="sec" aria-labelledby="fq-h">
         <div className="w fq">
           <div>

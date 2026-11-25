@@ -12,18 +12,9 @@ export default function MonitorPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / "}
-            <Link href="/solutions">
-              Solutions
-            </Link>
-            {" / Monitor"}
-          </p>
+
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
-            Solutions · Monitor
+          Monitor
           </span>
           <h1 className="h1" id="pg-h">
             Keep watching your market, without anyone watching it.

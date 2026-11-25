@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SolutionCards from "@/components/SolutionCards";
 
 export const metadata: Metadata = {
   title: "Insyder — Solutions",
@@ -11,12 +12,7 @@ export default function SolutionsPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / Solutions"}
-          </p>
+         
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
             Solutions
           </span>
@@ -64,74 +60,7 @@ export default function SolutionsPage() {
           <h2 className="h2" id="wf-h">
             From first signal to first meeting.
           </h2>
-          <div className="solgrid">
-            <Link className="solcard" href="/discover">
-              <b>
-                Discover
-              </b>
-              <p>
-                Find companies with a reason to talk, from a plain-language search.
-              </p>
-              <span className="sc-btn">
-                Explore discover
-              </span>
-            </Link>
-            <Link className="solcard" href="/monitor">
-              <b>
-                Monitor
-              </b>
-              <p>
-                Saved playbooks that re-check on a schedule and log new signals.
-              </p>
-              <span className="sc-btn">
-                Explore monitor
-              </span>
-            </Link>
-            <Link className="solcard" href="/accounts">
-              <b>
-                Accounts
-              </b>
-              <p>
-                Every account, its evidence, its brief and its path to sales.
-              </p>
-              <span className="sc-btn">
-                Explore accounts
-              </span>
-            </Link>
-            <Link className="solcard" href="/contact-profiling">
-              <b>
-                Contact profiling
-              </b>
-              <p>
-                Find who decides, then prepare for each person.
-              </p>
-              <span className="sc-btn">
-                Explore contact profiling
-              </span>
-            </Link>
-            <Link className="solcard" href="/outreach">
-              <b>
-                Outreach
-              </b>
-              <p>
-                Tasks, drafts and handoffs that carry the account’s context.
-              </p>
-              <span className="sc-btn">
-                Explore outreach
-              </span>
-            </Link>
-            <Link className="solcard" href="/contact-profiling">
-              <b>
-                Role hypothesis
-              </b>
-              <p>
-                A meeting-ready brief for each contact: what they control, how to open, what to ask and what to avoid.
-              </p>
-              <span className="sc-btn">
-                See an example
-              </span>
-            </Link>
-          </div>
+          <SolutionCards />
         </div>
       </section>
       <section aria-labelledby="bt-h">

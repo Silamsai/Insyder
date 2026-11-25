@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = {
   title: "Insyder — Accounts",
@@ -11,18 +12,9 @@ export default function AccountsPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / "}
-            <Link href="/solutions">
-              Solutions
-            </Link>
-            {" / Accounts"}
-          </p>
+        
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
-            Solutions · Accounts
+          Accounts
           </span>
           <h1 className="h1" id="pg-h">
             Every account, its evidence and its path to sales, in one place.
@@ -480,62 +472,15 @@ export default function AccountsPage() {
           </div>
         </div>
       </section>
-      <section className="sec dk" aria-labelledby="st-h">
-        <div className="w">
-          <span className="kick">
-            How it works
-          </span>
-          <h2 className="h2" id="st-h">
-            From watchlist to CRM, with a check at every step.
-          </h2>
-          <div className="steps3">
-            <div>
-              <span>
-                01
-              </span>
-              <b>
-                Research
-              </b>
-              <p>
-                Check the evidence behind each signal.
-              </p>
-            </div>
-            <div>
-              <span>
-                02
-              </span>
-              <b>
-                Qualify
-              </b>
-              <p>
-                Fill a brief where every answer records its basis.
-              </p>
-            </div>
-            <div>
-              <span>
-                03
-              </span>
-              <b>
-                Accept
-              </b>
-              <p>
-                A reviewer accepts, returns or rejects, with a reason.
-              </p>
-            </div>
-            <div>
-              <span>
-                04
-              </span>
-              <b>
-                Hand off
-              </b>
-              <p>
-                Send to your CRM or a partner, with no duplicates.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowItWorks
+        title="From watchlist to CRM, with a check at every step."
+        steps={[
+          { title: "Research", text: "Check the evidence behind each signal.", icon: "research" },
+          { title: "Qualify", text: "Fill a brief where every answer records its basis.", icon: "qualify" },
+          { title: "Accept", text: "A reviewer accepts, returns or rejects, with a reason.", icon: "accept" },
+          { title: "Hand off", text: "Send to your CRM or a partner, with no duplicates.", icon: "handoff" },
+        ]}
+      />
       <section className="sec" aria-labelledby="fq-h">
         <div className="w fq">
           <div>

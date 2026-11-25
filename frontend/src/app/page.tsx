@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import GetStarted from "@/components/GetStarted";
+import SolutionCards from "@/components/SolutionCards";
 
 export const metadata: Metadata = {
   title: "Insyder — Account intelligence for revenue teams",
@@ -91,74 +92,7 @@ export default function HomePage() {
               Five connected workflows, each with the evidence attached.
             </p>
           </div>
-          <div className="solgrid">
-            <Link className="solcard" href="/discover">
-              <b>
-                Discover
-              </b>
-              <p>
-                Find companies with a reason to talk, from a plain-language search.
-              </p>
-              <span className="sc-btn">
-                Explore discover
-              </span>
-            </Link>
-            <Link className="solcard" href="/monitor">
-              <b>
-                Monitor
-              </b>
-              <p>
-                Saved playbooks that re-check on a schedule and log new signals.
-              </p>
-              <span className="sc-btn">
-                Explore monitor
-              </span>
-            </Link>
-            <Link className="solcard" href="/accounts">
-              <b>
-                Accounts
-              </b>
-              <p>
-                Every account, its evidence, its brief and its path to sales.
-              </p>
-              <span className="sc-btn">
-                Explore accounts
-              </span>
-            </Link>
-            <Link className="solcard" href="/contact-profiling">
-              <b>
-                Contact profiling
-              </b>
-              <p>
-                Find who decides, then prepare for each person.
-              </p>
-              <span className="sc-btn">
-                Explore contact profiling
-              </span>
-            </Link>
-            <Link className="solcard" href="/outreach">
-              <b>
-                Outreach
-              </b>
-              <p>
-                Tasks, drafts and handoffs that carry the account’s context.
-              </p>
-              <span className="sc-btn">
-                Explore outreach
-              </span>
-            </Link>
-            <Link className="solcard" href="/contact-profiling">
-              <b>
-                Role hypothesis
-              </b>
-              <p>
-                A meeting-ready brief for each contact: what they control, how to open, what to ask and what to avoid.
-              </p>
-              <span className="sc-btn">
-                See an example
-              </span>
-            </Link>
-          </div>
+          <SolutionCards />
         </div>
       </section>
       <section className="sec dk" aria-labelledby="rh-h">

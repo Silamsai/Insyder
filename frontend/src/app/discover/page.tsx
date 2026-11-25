@@ -12,18 +12,9 @@ export default function DiscoverPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / "}
-            <Link href="/solutions">
-              Solutions
-            </Link>
-            {" / Discover"}
-          </p>
+        
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
-            Solutions · Discover
+            Discover
           </span>
           <h1 className="h1" id="pg-h">
             Find companies with a reason to talk, before anyone else does.

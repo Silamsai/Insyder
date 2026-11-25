@@ -11,12 +11,7 @@ export default function AboutPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / About"}
-          </p>
+          
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
             About Insyder
           </span>
@@ -36,7 +31,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="sec" aria-labelledby="purpose-heading">
+      <section className="sec about-split" aria-labelledby="purpose-heading">
         <div className="w">
           <div className="frow">
             <div className="ftxt">

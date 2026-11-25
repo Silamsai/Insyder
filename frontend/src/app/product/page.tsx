@@ -12,12 +12,7 @@ export default function ProductPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / Product"}
-          </p>
+      
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
             Product tour
           </span>

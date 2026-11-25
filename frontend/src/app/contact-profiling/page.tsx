@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import AnchorLink from "@/components/AnchorLink";
+import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = {
   title: "Insyder — Contact profiling",
@@ -12,18 +14,9 @@ export default function ContactProfilingPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / "}
-            <Link href="/solutions">
-              Solutions
-            </Link>
-            {" / Contact profiling"}
-          </p>
+
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
-            Solutions · Contact profiling
+          Contact profiling
           </span>
           <h1 className="h1" id="pg-h">
             Know who decides, and what to say to each of them.
@@ -37,18 +30,18 @@ export default function ContactProfilingPage() {
             </Link>
           </div>
           <nav className="anchors" aria-label="On this page">
-            <a href="#find">
+            <AnchorLink to="find">
               Find decision makers
-            </a>
-            <a href="#roles">
+            </AnchorLink>
+            <AnchorLink to="roles">
               Roles to find
-            </a>
-            <a href="#hypothesis">
+            </AnchorLink>
+            <AnchorLink to="hypothesis">
               Role hypothesis
-            </a>
-            <a href="#notes">
+            </AnchorLink>
+            <AnchorLink to="notes">
               Meeting notes
-            </a>
+            </AnchorLink>
           </nav>
         </div>
       </section>
@@ -214,62 +207,16 @@ export default function ContactProfilingPage() {
           </div>
         </div>
       </section>
-      <section className="sec dk" aria-labelledby="st-h">
-        <div className="w">
-          <span className="kick">
-            How it works
-          </span>
-          <h2 className="h2" id="st-h">
-            From an account to a prepared call.
-          </h2>
-          <div className="steps3">
-            <div>
-              <span>
-                01
-              </span>
-              <b>
-                Find people
-              </b>
-              <p>
-                Search for decision makers on the account.
-              </p>
-            </div>
-            <div>
-              <span>
-                02
-              </span>
-              <b>
-                Check them
-              </b>
-              <p>
-                Confirm who they are before relying on them.
-              </p>
-            </div>
-            <div>
-              <span>
-                03
-              </span>
-              <b>
-                Run a hypothesis
-              </b>
-              <p>
-                Get a ten-section brief for each contact.
-              </p>
-            </div>
-            <div>
-              <span>
-                04
-              </span>
-              <b>
-                Prepare
-              </b>
-              <p>
-                Add a meeting note, regenerate and export.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowItWorks
+        title="From an account to a prepared call."
+        lead="Four steps take you from a company name to a conversation you are ready for."
+        steps={[
+          { title: "Find people", text: "Search for decision makers on the account.", icon: "find" },
+          { title: "Check them", text: "Confirm who they are before relying on them.", icon: "check" },
+          { title: "Run a hypothesis", text: "Get a ten-section brief for each contact.", icon: "idea" },
+          { title: "Prepare", text: "Add a meeting note, regenerate and export.", icon: "prep" },
+        ]}
+      />
       <section className="sec" aria-labelledby="fq-h">
         <div className="w fq">
           <div>

@@ -331,6 +331,16 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .frow.rev .ftxt{order:2}
 .frow h2{font-family:var(--font-schibsted),sans-serif;font-weight:800;font-size:clamp(30px,3.2vw,44px);letter-spacing:-0.035em;line-height:1.05;margin:12px 0 16px}
 .frow .lead{font-size:17.5px}
+/* About: two equal columns, top-aligned, justified text, tighter vertical space */
+.sec.about-split{padding:72px 0}
+.about-split .frow{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;padding:0}
+.about-split .ftxt p{text-align:justify;hyphens:auto}
+.about-split .ftxt .lead{margin-bottom:12px}
+/* Button row inside generic sections (e.g. About dark band) */
+.sec .row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+/* Footer logo: keep the same type styling as the navbar logo */
+.ft a.logo{display:inline-flex;align-items:center;gap:10px;line-height:1;font-family:var(--font-schibsted),sans-serif;font-weight:700;font-size:23px;letter-spacing:-0.045em;color:#fff;padding:0;text-decoration:none}
+.ft a.logo:hover{color:#fff;text-decoration:none}
 .checks{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
 .checks li{display:flex;gap:10px;font-size:16px;line-height:1.5;color:#34404F}
 .checks li::before{content:"";width:6px;height:11px;flex:none;margin:4px 6px 0 4px;border-right:2.5px solid #0E6B67;border-bottom:2.5px solid #0E6B67;transform:rotate(45deg)}
@@ -396,6 +406,72 @@ a{color:#7FD3CB}a:hover{color:#fff}
   .g2f{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:560px){.steps3{grid-template-columns:minmax(0,1fr)}}
+/* Jump-link targets clear the sticky header */
+.frow[id]{scroll-margin-top:90px}
+/* "How it works" — connected step cards (Contact profiling) */
+.steps-sec{padding:96px 0;position:relative;overflow:hidden}
+.steps-sec::before{content:"";position:absolute;inset:-40% auto auto 50%;width:900px;height:600px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(127,211,203,.10),transparent);pointer-events:none}
+.steps-sec .w{position:relative}
+.steps-head{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:48px;align-items:end}
+.steps-head .h2{margin-bottom:0}
+.steps-head .lead{margin:0;max-width:30em;font-size:17px;line-height:1.6}
+.steps-pro{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;position:relative;counter-reset:none}
+.steps-pro::before{content:"";position:absolute;top:53px;left:48px;right:48px;height:1px;background:linear-gradient(90deg,rgba(127,211,203,.55),rgba(127,211,203,.15));z-index:0}
+.steps-pro li{position:relative;z-index:1;background:linear-gradient(180deg,#16283B,#112133);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:28px 26px 30px;transition:border-color .2s ease,transform .2s ease,background .2s ease}
+.steps-pro li:hover{border-color:rgba(127,211,203,.55);transform:translateY(-3px);background:linear-gradient(180deg,#183444,#112133)}
+.sp-n{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:#0D1B2A;border:1px solid #7FD3CB;color:#7FD3CB;font-family:var(--font-schibsted),sans-serif;font-size:15px;font-weight:800;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;transition:background .2s ease,color .2s ease}
+.steps-pro li:hover .sp-n{background:#7FD3CB;color:#0D1B2A}
+.steps-pro h3{font-family:var(--font-schibsted),sans-serif;font-size:21px;font-weight:700;letter-spacing:-0.02em;color:#fff;margin:22px 0 10px;line-height:1.2}
+.steps-pro p{margin:0;color:#B8C3CF;font-size:15px;line-height:1.55}
+@media (max-width:980px){
+  .steps-head{grid-template-columns:minmax(0,1fr);gap:16px}
+  .steps-pro{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps-pro::before{display:none}
+}
+@media (max-width:560px){
+  .steps-sec{padding:64px 0}
+  .steps-pro{grid-template-columns:minmax(0,1fr);gap:14px;margin-top:36px}
+  .steps-pro li{padding:22px 20px 24px}
+}
+@media (prefers-reduced-motion:reduce){.steps-pro li{transition:none}.steps-pro li:hover{transform:none}}
+.sp-top{display:flex;align-items:center;justify-content:space-between;height:52px}
+.sp-icw{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:14px;background:rgba(127,211,203,.10);border:1px solid rgba(127,211,203,.22);transition:background .25s ease,border-color .25s ease,transform .25s ease}
+.steps-pro li:hover .sp-icw,.steps-pro li:focus-within .sp-icw{background:rgba(127,211,203,.18);border-color:rgba(127,211,203,.55);transform:scale(1.06)}
+.sp-ic{width:28px;height:28px;fill:none;stroke:#7FD3CB;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+/* Icons are still by default and animate only while the card is hovered */
+.sp-ic g,.sp-ic path,.sp-ic circle,.sp-ic ellipse{transform-box:fill-box;transform-origin:center}
+.sp-ic .ic-bulb{transform-origin:center bottom}
+.sp-ic .ic-pen{transform-origin:left bottom}
+.sp-ic .ic-tick{stroke-dasharray:9;stroke-dashoffset:0}
+.sp-ic .ic-l1,.sp-ic .ic-l2{stroke-dasharray:8;stroke-dashoffset:0}
+.sp-ic .ic-line{stroke-dasharray:9;stroke-dashoffset:0}
+.steps-pro li:hover .ic-lens{animation:icScan 1.6s ease-in-out infinite}
+.steps-pro li:hover .ic-tick{animation:icTick 1.4s ease-out infinite}
+.steps-pro li:hover .ic-tick.ic-d2{animation-delay:.3s}
+.steps-pro li:hover .ic-glow{animation:icPop 1.4s ease-out infinite}
+.steps-pro li:hover .ic-rays{animation:icRays 1.2s ease-in-out infinite}
+.steps-pro li:hover .ic-bulb{animation:icGlow 1.2s ease-in-out infinite}
+.steps-pro li:hover .ic-l1{animation:icWriteL 1.6s ease-in-out infinite}
+.steps-pro li:hover .ic-l2{animation:icWriteL 1.6s ease-in-out .25s infinite}
+.steps-pro li:hover .ic-push{animation:icPush 1.4s ease-in-out infinite}
+.steps-pro li:hover .ic-drop{animation:icDrop 1.4s ease-in-out infinite}
+.steps-pro li:hover .ic-pen{animation:icPen 1.4s ease-in-out infinite}
+.steps-pro li:hover .ic-line{animation:icLine 1.4s ease-in-out infinite}
+.steps-pro li:hover .ic-s1{animation:icLight 1.4s ease-in-out infinite}
+.steps-pro li:hover .ic-s2{animation:icLight 1.4s ease-in-out .25s infinite}
+@keyframes icWriteL{0%{stroke-dashoffset:8}50%,100%{stroke-dashoffset:0}}
+@keyframes icPush{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
+@keyframes icDrop{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
+@keyframes icPen{0%,100%{transform:rotate(0) translate(0,0)}25%{transform:rotate(-6deg) translate(1px,-1px)}50%{transform:rotate(0) translate(2px,0)}75%{transform:rotate(-4deg) translate(1px,-1px)}}
+@keyframes icLine{0%{stroke-dashoffset:9}60%,100%{stroke-dashoffset:0}}
+@keyframes icScan{0%,100%{transform:translate(0,0)}25%{transform:translate(-2px,-1.5px)}50%{transform:translate(1.5px,-2px)}75%{transform:translate(1px,1px)}}
+@keyframes icTick{0%{stroke-dashoffset:9}45%,100%{stroke-dashoffset:0}}
+@keyframes icPop{0%,100%{filter:none}40%{filter:drop-shadow(0 0 3px rgba(127,211,203,.8))}}
+@keyframes icRays{0%,100%{opacity:1}50%{opacity:.2}}
+@keyframes icGlow{0%,100%{filter:none;transform:scale(1)}50%{filter:drop-shadow(0 0 4px rgba(127,211,203,.95));transform:scale(1.05)}}
+@keyframes icWrite{0%{stroke-dashoffset:5}50%,100%{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.sp-ic,.sp-ic *{animation:none!important}.sp-icw{transition:none}.steps-pro li:hover .sp-icw{transform:none}}
+
 
 /* ===== static site additions ===== */
 [hidden]{display:none !important}
@@ -424,6 +500,33 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .solcard .sc-btn{align-self:flex-start;margin-top:auto;display:inline-flex;align-items:center;min-height:42px;padding:0 20px;border:1px solid #7FD3CB;border-radius:999px;font-family:var(--font-geist),sans-serif;font-weight:600;font-size:14.5px;letter-spacing:-0.005em;color:#7FD3CB;background:transparent;transition:background-color .2s ease,color .2s ease}
 .solcard:hover .sc-btn,.solcard:focus-visible .sc-btn{background:#7FD3CB;color:#0D1B2A}
 @media (prefers-reduced-motion: reduce){.solcard,.solcard .sc-btn{transition:none}.solcard:hover,.solcard:focus-visible{transform:none}}
+/* Solution cards: number + icon row; icons animate only on hover/focus */
+.sc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sc-n{font-family:var(--font-schibsted),sans-serif;font-size:15px;font-weight:800;letter-spacing:-0.02em;color:#7FD3CB;font-variant-numeric:tabular-nums;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(127,211,203,.6);transition:background .2s ease,color .2s ease}
+.solcard:hover .sc-n,.solcard:focus-visible .sc-n{background:#7FD3CB;color:#0D1B2A}
+.sc-icw{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:14px;background:rgba(127,211,203,.10);border:1px solid rgba(127,211,203,.22);transition:background .25s ease,border-color .25s ease,transform .25s ease}
+.solcard:hover .sc-icw,.solcard:focus-visible .sc-icw{background:rgba(127,211,203,.18);border-color:rgba(127,211,203,.55);transform:scale(1.06)}
+.sc-ic{width:28px;height:28px;fill:none;stroke:#7FD3CB;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.sc-ic g,.sc-ic path{transform-box:fill-box;transform-origin:center}
+.ic-idea2 .ic-bulb{transform-origin:center bottom}
+.ic-mon .ic-pulse{stroke-dasharray:64;stroke-dashoffset:0}
+.solcard:hover .ic-disc .ic-lens,.solcard:focus-visible .ic-disc .ic-lens{animation:icScan 1.6s ease-in-out infinite}
+.solcard:hover .ic-disc .ic-spark,.solcard:focus-visible .ic-disc .ic-spark{animation:icSpark 1.6s ease-in-out infinite}
+.solcard:hover .ic-mon .ic-pulse,.solcard:focus-visible .ic-mon .ic-pulse{animation:icPulse 1.8s linear infinite}
+.solcard:hover .ic-acc .ic-w1,.solcard:focus-visible .ic-acc .ic-w1{animation:icLight 1.6s ease-in-out infinite}
+.solcard:hover .ic-acc .ic-w2,.solcard:focus-visible .ic-acc .ic-w2{animation:icLight 1.6s ease-in-out .2s infinite}
+.solcard:hover .ic-acc .ic-w3,.solcard:focus-visible .ic-acc .ic-w3{animation:icLight 1.6s ease-in-out .4s infinite}
+.solcard:hover .ic-acc .ic-w4,.solcard:focus-visible .ic-acc .ic-w4{animation:icLight 1.6s ease-in-out .6s infinite}
+.solcard:hover .ic-ppl .ic-p2,.solcard:focus-visible .ic-ppl .ic-p2{animation:icJoin 1.6s ease-in-out infinite}
+.solcard:hover .ic-send .ic-plane,.solcard:focus-visible .ic-send .ic-plane{animation:icFly 1.6s ease-in-out infinite}
+.solcard:hover .ic-idea2 .ic-rays,.solcard:focus-visible .ic-idea2 .ic-rays{animation:icRays 1.2s ease-in-out infinite}
+.solcard:hover .ic-idea2 .ic-bulb,.solcard:focus-visible .ic-idea2 .ic-bulb{animation:icGlow 1.2s ease-in-out infinite}
+@keyframes icSpark{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.6)}}
+@keyframes icPulse{0%{stroke-dashoffset:64}70%,100%{stroke-dashoffset:0}}
+@keyframes icLight{0%,100%{opacity:.35}40%{opacity:1}}
+@keyframes icJoin{0%,100%{transform:translateX(0);opacity:1}50%{transform:translateX(2px);opacity:.45}}
+@keyframes icFly{0%,100%{transform:translate(0,0)}45%{transform:translate(3px,-3px)}55%{transform:translate(3px,-3px);opacity:.6}}
+@media (prefers-reduced-motion:reduce){.sc-ic,.sc-ic *{animation:none!important}.sc-icw,.sc-n{transition:none}.solcard:hover .sc-icw{transform:none}}
 .related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:56px 0 96px}
 .related a{display:block;border:1px solid #DCD5C6;border-radius:14px;padding:22px 24px;text-decoration:none;color:#0D1B2A;background:#FCFBF7}
 .related a:hover{border-color:#0E6B67;color:#0D1B2A}
@@ -540,8 +643,8 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .h1{font-size:clamp(30px,8.4vw,40px)}
   .h2{font-size:clamp(28px,8vw,36px)}
   /* full-width, thumb-friendly buttons */
-  .hero-c .row,.pg-hero .row,.cta-band .row,.mid-in .row{flex-direction:column;align-items:stretch}
-  .hero-c .row .btn,.pg-hero .row .btn,.cta-band .row .btn,.mid-in .row .btn{width:100%;min-height:52px}
+  .hero-c .row,.pg-hero .row,.cta-band .row,.mid-in .row,.sec .row{flex-direction:column;align-items:stretch}
+  .hero-c .row .btn,.pg-hero .row .btn,.cta-band .row .btn,.mid-in .row .btn,.sec .row .btn{width:100%;min-height:52px}
   /* section links become a swipeable chip bar */
   .anchors{flex-wrap:nowrap;overflow-x:auto;margin:32px -16px 0;padding:20px 16px 4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .anchors::-webkit-scrollbar{display:none}
