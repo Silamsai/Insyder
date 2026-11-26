@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import HowItWorks from "@/components/HowItWorks";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/outreach",
   title: "Insyder — Outreach",
   description: "Researchers, reviewers and SDRs work from one task list. Drafts come from reviewed evidence, outcomes are logged, and handoffs stay clear.",
-};
+});
 
 export default function OutreachPage() {
   return (

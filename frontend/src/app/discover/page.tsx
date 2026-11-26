@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import HowItWorks from "@/components/HowItWorks";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/discover",
   title: "Insyder — Discover",
   description: "Describe the accounts you want in plain language. Insyder searches the web against your playbook, saves each match with its sources and hands it to a researcher.",
-};
+});
 
 export default function DiscoverPage() {
   return (

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/product",
   title: "Insyder — Product tour",
   description: "A tour of Insyder: Discover, Monitor, Accounts, Contact profiling and Outreach.",
-};
+});
 
 export default function ProductPage() {
   return (

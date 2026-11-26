@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import HowItWorks from "@/components/HowItWorks";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/monitor",
   title: "Insyder — Monitor",
   description: "Monitors are saved playbooks that re-run research on the schedule you choose, within your research quota, and log every new signal they find.",
-};
+});
 
 export default function MonitorPage() {
   return (

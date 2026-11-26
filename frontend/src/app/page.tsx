@@ -1,18 +1,44 @@
 import type { Metadata } from "next";
+import { faqJsonLd, jsonLdScript, pageMeta } from "@/lib/seo";
 import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetStarted from "@/components/GetStarted";
 import SolutionCards from "@/components/SolutionCards";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/",
   title: "Insyder — Account intelligence for revenue teams",
   description: "Find the right accounts, see the evidence, find who decides and walk into every first meeting prepared.",
-};
+});
+
+const faqs = [
+  {
+    q: "What does Insyder do?",
+    a: "It finds companies showing the changes your offer depends on, keeps the evidence behind each one, finds the people who decide and prepares a role hypothesis for each, then hands sales-accepted accounts to your CRM.",
+  },
+  {
+    q: "Does a signal mean a company is ready to buy?",
+    a: "No. A signal is a reason to ask a good question. Insyder keeps observations, inferences and confirmed answers separate so nobody mistakes one for the other.",
+  },
+  {
+    q: "Is a role hypothesis a personality profile?",
+    a: "No. It describes a professional role and how it likely works. Every point is a working hypothesis to check in conversation, and it lists what it doesn’t know.",
+  },
+  {
+    q: "Which CRMs does it work with?",
+    a: "HubSpot and Salesforce. Only sales-accepted accounts are sent, existing records are updated instead of duplicated, and opted-out contacts are never sent.",
+  },
+  {
+    q: "Is this an outsourced SDR service?",
+    a: "No. Insyder is software your team runs. Your people choose the accounts, judge the evidence and own every decision.",
+  },
+];
 
 export default function HomePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(faqJsonLd(faqs))} />
       <section className="hero-bg" aria-labelledby="h1">
         <div className="hero dk" style={{ background: "transparent" }}>
           <div className="w">
@@ -350,56 +376,14 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="fqd" data-reveal style={{ "--rd": "100ms" } as CSSProperties}>
-            <details>
-              <summary>
-                What does Insyder do?
-              </summary>
-              <div className="a">
-                <p>
-                  It finds companies showing the changes your offer depends on, keeps the evidence behind each one, finds the people who decide and prepares a role hypothesis for each, then hands sales-accepted accounts to your CRM.
-                </p>
-              </div>
-            </details>
-            <details>
-              <summary>
-                Does a signal mean a company is ready to buy?
-              </summary>
-              <div className="a">
-                <p>
-                  No. A signal is a reason to ask a good question. Insyder keeps observations, inferences and confirmed answers separate so nobody mistakes one for the other.
-                </p>
-              </div>
-            </details>
-            <details>
-              <summary>
-                Is a role hypothesis a personality profile?
-              </summary>
-              <div className="a">
-                <p>
-                  No. It describes a professional role and how it likely works. Every point is a working hypothesis to check in conversation, and it lists what it doesn’t know.
-                </p>
-              </div>
-            </details>
-            <details>
-              <summary>
-                Which CRMs does it work with?
-              </summary>
-              <div className="a">
-                <p>
-                  HubSpot and Salesforce. Only sales-accepted accounts are sent, existing records are updated instead of duplicated, and opted-out contacts are never sent.
-                </p>
-              </div>
-            </details>
-            <details>
-              <summary>
-                Is this an outsourced SDR service?
-              </summary>
-              <div className="a">
-                <p>
-                  No. Insyder is software your team runs. Your people choose the accounts, judge the evidence and own every decision.
-                </p>
-              </div>
-            </details>
+            {faqs.map(({ q, a }) => (
+              <details key={q}>
+                <summary>{q}</summary>
+                <div className="a">
+                  <p>{a}</p>
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import HowItWorks from "@/components/HowItWorks";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/accounts",
   title: "Insyder — Accounts",
   description: "Your target accounts with their research status, buying signals, qualification brief and deals. From watchlist to sales acceptance to CRM.",
-};
+});
 
 export default function AccountsPage() {
   return (
