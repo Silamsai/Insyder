@@ -55,9 +55,12 @@ export default function Header() {
     <header className="hd dk">
       <div className="w hd-in">
         <Link className="logo" href="/" aria-label="Insyder home">
-          <Logo size={28} /> insyder
+          <Logo size={32} /> insyder
         </Link>
         <nav className="nav" aria-label="Main">
+          <Link href="/" className={pathname === "/" ? "cur" : undefined} aria-current={cur("/")}>
+            Home
+          </Link>
           <Link href="/about" className={pathname === "/about" ? "cur" : undefined} aria-current={cur("/about")}>
             About
           </Link>

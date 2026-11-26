@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
+<<<<<<< HEAD
 import { pageMeta } from "@/lib/seo";
+=======
+import type { CSSProperties } from "react";
+>>>>>>> f55f55d43c531382d0cadaf829d9575f0289b6cb
 import Link from "next/link";
 
 export const metadata: Metadata = pageMeta({
@@ -13,12 +17,7 @@ export default function AboutPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / About"}
-          </p>
+          
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
             About Insyder
           </span>
@@ -38,10 +37,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="sec" aria-labelledby="purpose-heading">
+      <section className="sec about-split" aria-labelledby="purpose-heading">
         <div className="w">
           <div className="frow">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Why Insyder
               </span>
@@ -55,7 +54,7 @@ export default function AboutPage() {
                 Insyder brings those steps together in one workflow: discover relevant accounts, monitor new signals, build account briefs, profile decision makers and carry context into outreach.
               </p>
             </div>
-            <div className="ftxt">
+            <div className="ftxt" data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <span className="kick">
                 How we work
               </span>
@@ -73,7 +72,7 @@ export default function AboutPage() {
         </div>
       </section>
       <section className="sec dk" aria-labelledby="audience-heading">
-        <div className="w">
+        <div className="w" data-reveal>
           <span className="kick">
             Built for teams who sell into change
           </span>

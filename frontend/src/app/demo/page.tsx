@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
+<<<<<<< HEAD
 import { pageMeta } from "@/lib/seo";
+=======
+import type { CSSProperties } from "react";
+>>>>>>> f55f55d43c531382d0cadaf829d9575f0289b6cb
 import Link from "next/link";
 import DemoForm from "@/components/DemoForm";
 
@@ -67,7 +71,7 @@ export default function DemoPage() {
       </section>
       <section className="sec" aria-labelledby="dq">
         <div className="w fq">
-          <div>
+          <div data-reveal>
             <span className="kick">
               Before you book
             </span>
@@ -75,7 +79,7 @@ export default function DemoPage() {
               Quick answers.
             </h2>
           </div>
-          <div className="fqd">
+          <div className="fqd" data-reveal style={{ "--rd": "100ms" } as CSSProperties}>
             <details>
               <summary>
                 Is Insyder an outsourced SDR service?

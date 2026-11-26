@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
+<<<<<<< HEAD
 import { pageMeta } from "@/lib/seo";
+=======
+import type { CSSProperties } from "react";
+>>>>>>> f55f55d43c531382d0cadaf829d9575f0289b6cb
 import Link from "next/link";
+import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = pageMeta({
   path: "/outreach",
@@ -13,18 +18,9 @@ export default function OutreachPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / "}
-            <Link href="/solutions">
-              Solutions
-            </Link>
-            {" / Outreach"}
-          </p>
+         
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
-            Solutions · Outreach
+          Outreach
           </span>
           <h1 className="h1" id="pg-h">
             Every task carries its context.
@@ -56,7 +52,7 @@ export default function OutreachPage() {
       <section aria-label="Outreach in detail">
         <div className="w">
           <div className="frow" id="tasks">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Team tasks
               </span>
@@ -81,7 +77,7 @@ export default function OutreachPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="All tasks, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -136,7 +132,7 @@ export default function OutreachPage() {
             </div>
           </div>
           <div className="frow rev" id="work">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Work my tasks
               </span>
@@ -161,7 +157,7 @@ export default function OutreachPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Research task, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -216,7 +212,7 @@ export default function OutreachPage() {
             </div>
           </div>
           <div className="frow" id="drafts">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Drafts
               </span>
@@ -241,7 +237,7 @@ export default function OutreachPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Drafts, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -296,7 +292,7 @@ export default function OutreachPage() {
             </div>
           </div>
           <div className="frow rev" id="handoffs">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Handoffs
               </span>
@@ -321,7 +317,7 @@ export default function OutreachPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Partner handoffs, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -364,65 +360,18 @@ export default function OutreachPage() {
           </div>
         </div>
       </section>
-      <section className="sec dk" aria-labelledby="st-h">
-        <div className="w">
-          <span className="kick">
-            How it works
-          </span>
-          <h2 className="h2" id="st-h">
-            From accepted account to logged outcome.
-          </h2>
-          <div className="steps3">
-            <div>
-              <span>
-                01
-              </span>
-              <b>
-                Receive
-              </b>
-              <p>
-                Accepted accounts arrive as tasks with context.
-              </p>
-            </div>
-            <div>
-              <span>
-                02
-              </span>
-              <b>
-                Prepare
-              </b>
-              <p>
-                Read the brief and the contact’s role hypothesis.
-              </p>
-            </div>
-            <div>
-              <span>
-                03
-              </span>
-              <b>
-                Draft
-              </b>
-              <p>
-                Write outreach from reviewed evidence.
-              </p>
-            </div>
-            <div>
-              <span>
-                04
-              </span>
-              <b>
-                Log
-              </b>
-              <p>
-                Record the outcome, or hand off to a partner.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowItWorks
+        title="From accepted account to logged outcome."
+        steps={[
+          { title: "Receive", text: "Accepted accounts arrive as tasks with context.", icon: "receive" },
+          { title: "Prepare", text: "Read the brief and the contact’s role hypothesis.", icon: "prep" },
+          { title: "Draft", text: "Write outreach from reviewed evidence.", icon: "draft" },
+          { title: "Log", text: "Record the outcome, or hand off to a partner.", icon: "log" },
+        ]}
+      />
       <section className="sec" aria-labelledby="fq-h">
         <div className="w fq">
-          <div>
+          <div data-reveal>
             <span className="kick">
               FAQ
             </span>
@@ -430,7 +379,7 @@ export default function OutreachPage() {
               Questions about Outreach.
             </h2>
           </div>
-          <div className="fqd">
+          <div className="fqd" data-reveal style={{ "--rd": "100ms" } as CSSProperties}>
             <details>
               <summary>
                 Does Insyder send emails for us?
@@ -464,7 +413,7 @@ export default function OutreachPage() {
           </div>
         </div>
       </section>
-      <nav className="w related" aria-label="More solutions">
+      <nav className="w related" data-reveal aria-label="More solutions">
         <Link href="/contact-profiling">
           <span>
             ← Previous
@@ -483,7 +432,7 @@ export default function OutreachPage() {
         </Link>
       </nav>
       <section className="cta-band dk" aria-labelledby="cta-h">
-        <div className="w">
+        <div className="w" data-reveal>
           <h2 id="cta-h">
             Start every conversation with context.
           </h2>

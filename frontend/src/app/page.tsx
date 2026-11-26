@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
+<<<<<<< HEAD
 import { faqJsonLd, jsonLdScript, pageMeta } from "@/lib/seo";
+=======
+import type { CSSProperties } from "react";
+>>>>>>> f55f55d43c531382d0cadaf829d9575f0289b6cb
 import Image from "next/image";
 import Link from "next/link";
 import GetStarted from "@/components/GetStarted";
+import SolutionCards from "@/components/SolutionCards";
 
 export const metadata: Metadata = pageMeta({
   path: "/",
@@ -81,7 +86,7 @@ export default function HomePage() {
         </div>
       </section>
       <section className="strip" aria-label="Who Insyder is built for">
-        <div className="w">
+        <div className="w" data-reveal>
           <p>
             Built for teams who sell into change
           </p>
@@ -106,7 +111,7 @@ export default function HomePage() {
       </section>
       <section className="sec" aria-labelledby="sol-h" style={{ paddingTop: "72px" }}>
         <div className="w">
-          <div style={{ maxWidth: "820px" }}>
+          <div style={{ maxWidth: "820px" }} data-reveal>
             <span className="kick">
               Solutions
             </span>
@@ -117,80 +122,13 @@ export default function HomePage() {
               Five connected workflows, each with the evidence attached.
             </p>
           </div>
-          <div className="solgrid">
-            <Link className="solcard" href="/discover">
-              <b>
-                Discover
-              </b>
-              <p>
-                Find companies with a reason to talk, from a plain-language search.
-              </p>
-              <span className="sc-btn">
-                Explore discover
-              </span>
-            </Link>
-            <Link className="solcard" href="/monitor">
-              <b>
-                Monitor
-              </b>
-              <p>
-                Saved playbooks that re-check on a schedule and log new signals.
-              </p>
-              <span className="sc-btn">
-                Explore monitor
-              </span>
-            </Link>
-            <Link className="solcard" href="/accounts">
-              <b>
-                Accounts
-              </b>
-              <p>
-                Every account, its evidence, its brief and its path to sales.
-              </p>
-              <span className="sc-btn">
-                Explore accounts
-              </span>
-            </Link>
-            <Link className="solcard" href="/contact-profiling">
-              <b>
-                Contact profiling
-              </b>
-              <p>
-                Find who decides, then prepare for each person.
-              </p>
-              <span className="sc-btn">
-                Explore contact profiling
-              </span>
-            </Link>
-            <Link className="solcard" href="/outreach">
-              <b>
-                Outreach
-              </b>
-              <p>
-                Tasks, drafts and handoffs that carry the account’s context.
-              </p>
-              <span className="sc-btn">
-                Explore outreach
-              </span>
-            </Link>
-            <Link className="solcard" href="/contact-profiling">
-              <b>
-                Role hypothesis
-              </b>
-              <p>
-                A meeting-ready brief for each contact: what they control, how to open, what to ask and what to avoid.
-              </p>
-              <span className="sc-btn">
-                See an example
-              </span>
-            </Link>
-          </div>
+          <SolutionCards />
         </div>
       </section>
       <section className="sec dk" aria-labelledby="rh-h">
         <div className="w">
           <div className="rh-intro">
-            <div>
+            <div data-reveal>
               <span className="kick">
                 Role hypothesis
               </span>
@@ -209,7 +147,7 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <ul className="facts" aria-label="Role hypothesis at a glance">
+            <ul className="facts" aria-label="Role hypothesis at a glance" data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <li>
                 <span>
                   Built from
@@ -252,7 +190,7 @@ export default function HomePage() {
               </li>
             </ul>
           </div>
-          <div className="doc" role="img" aria-label="Excerpt from a sample role hypothesis for a fictional contact, Helen Marsh">
+          <div className="doc" data-reveal role="img" aria-label="Excerpt from a sample role hypothesis for a fictional contact, Helen Marsh">
             <div aria-hidden="true">
               <div className="doc-top">
                 <div>
@@ -328,7 +266,7 @@ export default function HomePage() {
       </section>
       <section className="mid" aria-label="Book a demo">
         <div className="w">
-          <div className="mid-in">
+          <div className="mid-in" data-reveal>
             <h2>
               See Insyder on accounts like the ones your team sells to.
             </h2>
@@ -345,7 +283,7 @@ export default function HomePage() {
       </section>
       <section className="sec" aria-labelledby="pl-h" style={{ paddingTop: "24px" }}>
         <div className="w">
-          <div style={{ maxWidth: "820px" }}>
+          <div style={{ maxWidth: "820px" }} data-reveal>
             <span className="kick">
               {"Platform & trust"}
             </span>
@@ -357,7 +295,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="trust">
-            <div className="tc">
+            <div className="tc" data-reveal style={{ "--rd": "0ms" } as CSSProperties}>
               <h3>
                 CRM sync
               </h3>
@@ -373,7 +311,7 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className="tc">
+            <div className="tc" data-reveal style={{ "--rd": "90ms" } as CSSProperties}>
               <h3>
                 Evidence you can check
               </h3>
@@ -389,7 +327,7 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className="tc">
+            <div className="tc" data-reveal style={{ "--rd": "180ms" } as CSSProperties}>
               <h3>
                 Access control
               </h3>
@@ -405,7 +343,7 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className="tc">
+            <div className="tc" data-reveal style={{ "--rd": "270ms" } as CSSProperties}>
               <h3>
                 Usage you control
               </h3>
@@ -432,7 +370,7 @@ export default function HomePage() {
       <GetStarted />
       <section className="sec" aria-labelledby="fq-h" style={{ paddingTop: "0" }}>
         <div className="w fq">
-          <div>
+          <div data-reveal>
             <span className="kick">
               FAQ
             </span>
@@ -440,6 +378,7 @@ export default function HomePage() {
               Good questions.
             </h2>
           </div>
+<<<<<<< HEAD
           <div className="fqd">
             {faqs.map(({ q, a }) => (
               <details key={q}>
@@ -449,12 +388,65 @@ export default function HomePage() {
                 </div>
               </details>
             ))}
+=======
+          <div className="fqd" data-reveal style={{ "--rd": "100ms" } as CSSProperties}>
+            <details>
+              <summary>
+                What does Insyder do?
+              </summary>
+              <div className="a">
+                <p>
+                  It finds companies showing the changes your offer depends on, keeps the evidence behind each one, finds the people who decide and prepares a role hypothesis for each, then hands sales-accepted accounts to your CRM.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Does a signal mean a company is ready to buy?
+              </summary>
+              <div className="a">
+                <p>
+                  No. A signal is a reason to ask a good question. Insyder keeps observations, inferences and confirmed answers separate so nobody mistakes one for the other.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Is a role hypothesis a personality profile?
+              </summary>
+              <div className="a">
+                <p>
+                  No. It describes a professional role and how it likely works. Every point is a working hypothesis to check in conversation, and it lists what it doesn’t know.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Which CRMs does it work with?
+              </summary>
+              <div className="a">
+                <p>
+                  HubSpot and Salesforce. Only sales-accepted accounts are sent, existing records are updated instead of duplicated, and opted-out contacts are never sent.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Is this an outsourced SDR service?
+              </summary>
+              <div className="a">
+                <p>
+                  No. Insyder is software your team runs. Your people choose the accounts, judge the evidence and own every decision.
+                </p>
+              </div>
+            </details>
+>>>>>>> f55f55d43c531382d0cadaf829d9575f0289b6cb
           </div>
         </div>
       </section>
       <section className="fin dk" aria-labelledby="fin-h">
         <div className="w">
-          <h2 id="fin-h">
+          <h2 id="fin-h" data-reveal>
             {"Every account with a "}
             <em>
               reason
@@ -462,7 +454,7 @@ export default function HomePage() {
             , an owner and a prepared first call.
           </h2>
           <div className="fin-opts">
-            <div className="fo">
+            <div className="fo" data-reveal style={{ "--rd": "100ms" } as CSSProperties}>
               <b>
                 Book a demo
               </b>
@@ -473,7 +465,7 @@ export default function HomePage() {
                 Book a demo
               </Link>
             </div>
-            <div className="fo">
+            <div className="fo" data-reveal style={{ "--rd": "200ms" } as CSSProperties}>
               <b>
                 See a role hypothesis
               </b>

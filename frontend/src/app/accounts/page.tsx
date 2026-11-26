@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
+<<<<<<< HEAD
 import { pageMeta } from "@/lib/seo";
+=======
+import type { CSSProperties } from "react";
+>>>>>>> f55f55d43c531382d0cadaf829d9575f0289b6cb
 import Link from "next/link";
+import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = pageMeta({
   path: "/accounts",
@@ -13,18 +18,9 @@ export default function AccountsPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / "}
-            <Link href="/solutions">
-              Solutions
-            </Link>
-            {" / Accounts"}
-          </p>
+        
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
-            Solutions · Accounts
+          Accounts
           </span>
           <h1 className="h1" id="pg-h">
             Every account, its evidence and its path to sales, in one place.
@@ -59,7 +55,7 @@ export default function AccountsPage() {
       <section aria-label="Accounts in detail">
         <div className="w">
           <div className="frow" id="watchlist">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 {"Watchlist & imports"}
               </span>
@@ -84,7 +80,7 @@ export default function AccountsPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Account intelligence, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -152,7 +148,7 @@ export default function AccountsPage() {
             </div>
           </div>
           <div className="frow rev" id="brief">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Account brief
               </span>
@@ -177,7 +173,7 @@ export default function AccountsPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Northbridge Manufacturing, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -232,7 +228,7 @@ export default function AccountsPage() {
             </div>
           </div>
           <div className="frow" id="qualify">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Qualify a lead
               </span>
@@ -257,7 +253,7 @@ export default function AccountsPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Qualification brief, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -312,7 +308,7 @@ export default function AccountsPage() {
             </div>
           </div>
           <div className="frow rev" id="acceptance">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Sales acceptance
               </span>
@@ -337,7 +333,7 @@ export default function AccountsPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Sales acceptance, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -405,7 +401,7 @@ export default function AccountsPage() {
             </div>
           </div>
           <div className="frow" id="pipeline">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 {"Pipeline & CRM"}
               </span>
@@ -430,7 +426,7 @@ export default function AccountsPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Opportunity pipeline, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -482,65 +478,18 @@ export default function AccountsPage() {
           </div>
         </div>
       </section>
-      <section className="sec dk" aria-labelledby="st-h">
-        <div className="w">
-          <span className="kick">
-            How it works
-          </span>
-          <h2 className="h2" id="st-h">
-            From watchlist to CRM, with a check at every step.
-          </h2>
-          <div className="steps3">
-            <div>
-              <span>
-                01
-              </span>
-              <b>
-                Research
-              </b>
-              <p>
-                Check the evidence behind each signal.
-              </p>
-            </div>
-            <div>
-              <span>
-                02
-              </span>
-              <b>
-                Qualify
-              </b>
-              <p>
-                Fill a brief where every answer records its basis.
-              </p>
-            </div>
-            <div>
-              <span>
-                03
-              </span>
-              <b>
-                Accept
-              </b>
-              <p>
-                A reviewer accepts, returns or rejects, with a reason.
-              </p>
-            </div>
-            <div>
-              <span>
-                04
-              </span>
-              <b>
-                Hand off
-              </b>
-              <p>
-                Send to your CRM or a partner, with no duplicates.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowItWorks
+        title="From watchlist to CRM, with a check at every step."
+        steps={[
+          { title: "Research", text: "Check the evidence behind each signal.", icon: "research" },
+          { title: "Qualify", text: "Fill a brief where every answer records its basis.", icon: "qualify" },
+          { title: "Accept", text: "A reviewer accepts, returns or rejects, with a reason.", icon: "accept" },
+          { title: "Hand off", text: "Send to your CRM or a partner, with no duplicates.", icon: "handoff" },
+        ]}
+      />
       <section className="sec" aria-labelledby="fq-h">
         <div className="w fq">
-          <div>
+          <div data-reveal>
             <span className="kick">
               FAQ
             </span>
@@ -548,7 +497,7 @@ export default function AccountsPage() {
               Questions about Accounts.
             </h2>
           </div>
-          <div className="fqd">
+          <div className="fqd" data-reveal style={{ "--rd": "100ms" } as CSSProperties}>
             <details>
               <summary>
                 What is the priority score?
@@ -582,7 +531,7 @@ export default function AccountsPage() {
           </div>
         </div>
       </section>
-      <nav className="w related" aria-label="More solutions">
+      <nav className="w related" data-reveal aria-label="More solutions">
         <Link href="/monitor">
           <span>
             ← Previous
@@ -601,7 +550,7 @@ export default function AccountsPage() {
         </Link>
       </nav>
       <section className="cta-band dk" aria-labelledby="cta-h">
-        <div className="w">
+        <div className="w" data-reveal>
           <h2 id="cta-h">
             Give sales fewer, better accounts.
           </h2>

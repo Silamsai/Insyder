@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
+import SolutionCards from "@/components/SolutionCards";
 
 export const metadata: Metadata = pageMeta({
   path: "/solutions",
@@ -13,12 +14,7 @@ export default function SolutionsPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / Solutions"}
-          </p>
+         
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
             Solutions
           </span>
@@ -60,91 +56,24 @@ export default function SolutionsPage() {
       </section>
       <section className="sec" id="workflows" aria-labelledby="wf-h">
         <div className="w">
-          <span className="kick">
+          <span className="kick" data-reveal>
             Workflows
           </span>
-          <h2 className="h2" id="wf-h">
+          <h2 className="h2" id="wf-h" data-reveal>
             From first signal to first meeting.
           </h2>
-          <div className="solgrid">
-            <Link className="solcard" href="/discover">
-              <b>
-                Discover
-              </b>
-              <p>
-                Find companies with a reason to talk, from a plain-language search.
-              </p>
-              <span className="sc-btn">
-                Explore discover
-              </span>
-            </Link>
-            <Link className="solcard" href="/monitor">
-              <b>
-                Monitor
-              </b>
-              <p>
-                Saved playbooks that re-check on a schedule and log new signals.
-              </p>
-              <span className="sc-btn">
-                Explore monitor
-              </span>
-            </Link>
-            <Link className="solcard" href="/accounts">
-              <b>
-                Accounts
-              </b>
-              <p>
-                Every account, its evidence, its brief and its path to sales.
-              </p>
-              <span className="sc-btn">
-                Explore accounts
-              </span>
-            </Link>
-            <Link className="solcard" href="/contact-profiling">
-              <b>
-                Contact profiling
-              </b>
-              <p>
-                Find who decides, then prepare for each person.
-              </p>
-              <span className="sc-btn">
-                Explore contact profiling
-              </span>
-            </Link>
-            <Link className="solcard" href="/outreach">
-              <b>
-                Outreach
-              </b>
-              <p>
-                Tasks, drafts and handoffs that carry the account’s context.
-              </p>
-              <span className="sc-btn">
-                Explore outreach
-              </span>
-            </Link>
-            <Link className="solcard" href="/contact-profiling">
-              <b>
-                Role hypothesis
-              </b>
-              <p>
-                A meeting-ready brief for each contact: what they control, how to open, what to ask and what to avoid.
-              </p>
-              <span className="sc-btn">
-                See an example
-              </span>
-            </Link>
-          </div>
+          <SolutionCards />
         </div>
       </section>
       <section aria-labelledby="bt-h">
         <div className="w">
-          <span className="kick">
+          <span className="kick" data-reveal>
             By team
           </span>
-          <h2 className="h2" id="bt-h">
+          <h2 className="h2" id="bt-h" data-reveal>
             Built for every role.
           </h2>
-          <div className="sol" id="leaders">
+          <div className="sol" data-reveal id="leaders">
             <div>
               <span className="kick">
                 Sales leaders
@@ -208,7 +137,7 @@ export default function SolutionsPage() {
               </div>
             </div>
           </div>
-          <div className="sol" id="sellers">
+          <div className="sol" data-reveal id="sellers">
             <div>
               <span className="kick">
                 {"SDRs & AEs"}
@@ -272,7 +201,7 @@ export default function SolutionsPage() {
               </div>
             </div>
           </div>
-          <div className="sol" id="researchers">
+          <div className="sol" data-reveal id="researchers">
             <div>
               <span className="kick">
                 Researchers
@@ -336,7 +265,7 @@ export default function SolutionsPage() {
               </div>
             </div>
           </div>
-          <div className="sol" id="revops">
+          <div className="sol" data-reveal id="revops">
             <div>
               <span className="kick">
                 RevOps
@@ -400,7 +329,7 @@ export default function SolutionsPage() {
               </div>
             </div>
           </div>
-          <div className="sol" id="agencies">
+          <div className="sol" data-reveal id="agencies">
             <div>
               <span className="kick">
                 {"Agencies & MSPs"}
@@ -464,7 +393,7 @@ export default function SolutionsPage() {
               </div>
             </div>
           </div>
-          <div className="sol" id="partners">
+          <div className="sol" data-reveal id="partners">
             <div>
               <span className="kick">
                 Channel partners
@@ -531,7 +460,7 @@ export default function SolutionsPage() {
         </div>
       </section>
       <section className="cta-band dk" aria-labelledby="cta-h">
-        <div className="w">
+        <div className="w" data-reveal>
           <h2 id="cta-h">
             See how your team would use it.
           </h2>

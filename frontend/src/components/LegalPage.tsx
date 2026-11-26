@@ -33,7 +33,7 @@ export default function LegalPage({
       </section>
       <section className="sec" style={{ paddingTop: "72px" }}>
         <div className="w legal">
-          <nav className="legal-toc" aria-label="On this page">
+          <nav className="legal-toc" data-reveal aria-label="On this page">
             <span className="kick">On this page</span>
             <ol>
               {sections.map((s, i) => (
@@ -45,7 +45,7 @@ export default function LegalPage({
           </nav>
           <div className="legal-body">
             {sections.map((s, i) => (
-              <section key={s.heading} id={`s${i + 1}`} aria-labelledby={`s${i + 1}-h`}>
+              <section key={s.heading} id={`s${i + 1}`} aria-labelledby={`s${i + 1}-h`} data-reveal>
                 <h2 id={`s${i + 1}-h`}>
                   <span>{String(i + 1).padStart(2, "0")}</span>
                   {s.heading}

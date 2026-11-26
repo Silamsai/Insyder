@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+<<<<<<< HEAD
 import { pageMeta } from "@/lib/seo";
+=======
+import type { CSSProperties } from "react";
+>>>>>>> f55f55d43c531382d0cadaf829d9575f0289b6cb
 import Link from "next/link";
 import Image from "next/image";
+import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = pageMeta({
   path: "/discover",
@@ -14,18 +19,9 @@ export default function DiscoverPage() {
     <>
       <section className="pg-hero dk" aria-labelledby="pg-h">
         <div className="w">
-          <p className="crumb">
-            <Link href="/">
-              Home
-            </Link>
-            {" / "}
-            <Link href="/solutions">
-              Solutions
-            </Link>
-            {" / Discover"}
-          </p>
+        
           <span className="kick" style={{ display: "block", marginTop: "28px" }}>
-            Solutions · Discover
+            Discover
           </span>
           <h1 className="h1" id="pg-h">
             Find companies with a reason to talk, before anyone else does.
@@ -57,7 +53,7 @@ export default function DiscoverPage() {
       <section aria-label="Discover in detail">
         <div className="w">
           <div style={{ paddingTop: "72px" }}>
-            <div className="frame-wrap">
+            <div className="frame-wrap" data-reveal>
               <Image
                 src="/discover-v3.png"
                 alt="Insyder Discover screen, Choose leads step: four companies found, each with its signal, date, sources and a score out of 100, ready to assign to a researcher."
@@ -70,7 +66,7 @@ export default function DiscoverPage() {
             </div>
           </div>
           <div className="frow" id="search">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Plain-language search
               </span>
@@ -95,7 +91,7 @@ export default function DiscoverPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
                 <Image
                   src="/describe-companies.png"
@@ -109,7 +105,7 @@ export default function DiscoverPage() {
             </div>
           </div>
           <div className="frow rev" id="types">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Search type
               </span>
@@ -131,7 +127,7 @@ export default function DiscoverPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Search type, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -186,7 +182,7 @@ export default function DiscoverPage() {
             </div>
           </div>
           <div className="frow" id="playbooks">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Playbooks
               </span>
@@ -211,7 +207,7 @@ export default function DiscoverPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
                 <Image
                   src="/playbooks.png"
@@ -225,7 +221,7 @@ export default function DiscoverPage() {
             </div>
           </div>
           <div className="frow rev" id="assign">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 {"Choose & assign"}
               </span>
@@ -250,7 +246,7 @@ export default function DiscoverPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
                 <Image
                   src="/find-and-assign.png"
@@ -265,65 +261,18 @@ export default function DiscoverPage() {
           </div>
         </div>
       </section>
-      <section className="sec dk" aria-labelledby="st-h">
-        <div className="w">
-          <span className="kick">
-            How it works
-          </span>
-          <h2 className="h2" id="st-h">
-            From a sentence to an assigned lead in four steps.
-          </h2>
-          <div className="steps3">
-            <div>
-              <span>
-                01
-              </span>
-              <b>
-                Describe
-              </b>
-              <p>
-                Write who you’re looking for and pick a playbook.
-              </p>
-            </div>
-            <div>
-              <span>
-                02
-              </span>
-              <b>
-                Review
-              </b>
-              <p>
-                Check the search before research units are spent.
-              </p>
-            </div>
-            <div>
-              <span>
-                03
-              </span>
-              <b>
-                Choose
-              </b>
-              <p>
-                Select the leads worth researching from the results.
-              </p>
-            </div>
-            <div>
-              <span>
-                04
-              </span>
-              <b>
-                Assign
-              </b>
-              <p>
-                Hand them to a researcher, with a task for each.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowItWorks
+        title="From a sentence to an assigned lead in four steps."
+        steps={[
+          { title: "Describe", text: "Write who you’re looking for and pick a playbook.", icon: "describe" },
+          { title: "Review", text: "Check the search before research units are spent.", icon: "review" },
+          { title: "Choose", text: "Select the leads worth researching from the results.", icon: "choose" },
+          { title: "Assign", text: "Hand them to a researcher, with a task for each.", icon: "assign" },
+        ]}
+      />
       <section className="sec" aria-labelledby="fq-h">
         <div className="w fq">
-          <div>
+          <div data-reveal>
             <span className="kick">
               FAQ
             </span>
@@ -331,7 +280,7 @@ export default function DiscoverPage() {
               Questions about Discover.
             </h2>
           </div>
-          <div className="fqd">
+          <div className="fqd" data-reveal style={{ "--rd": "100ms" } as CSSProperties}>
             <details>
               <summary>
                 What does a search cost?
@@ -365,7 +314,7 @@ export default function DiscoverPage() {
           </div>
         </div>
       </section>
-      <nav className="w related" aria-label="More solutions">
+      <nav className="w related" data-reveal aria-label="More solutions">
         <Link href="/solutions">
           <span>
             ← All solutions
@@ -384,7 +333,7 @@ export default function DiscoverPage() {
         </Link>
       </nav>
       <section className="cta-band dk" aria-labelledby="cta-h">
-        <div className="w">
+        <div className="w" data-reveal>
           <h2 id="cta-h">
             Find your next accounts with a reason to talk.
           </h2>
