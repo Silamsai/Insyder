@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import HowItWorks from "@/components/HowItWorks";
@@ -47,7 +48,7 @@ export default function MonitorPage() {
       <section aria-label="Monitor in detail">
         <div className="w">
           <div className="frow" id="recipes">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Saved recipes
               </span>
@@ -72,7 +73,7 @@ export default function MonitorPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
                 <Image
                   src="/signal-monitors.jpeg"
@@ -86,7 +87,7 @@ export default function MonitorPage() {
             </div>
           </div>
           <div className="frow rev" id="cadence">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Cadence
               </span>
@@ -111,7 +112,7 @@ export default function MonitorPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
                 <Image
                   src="/monitor-cadence.jpeg"
@@ -125,7 +126,7 @@ export default function MonitorPage() {
             </div>
           </div>
           <div className="frow" id="signals">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Signals detected
               </span>
@@ -150,7 +151,7 @@ export default function MonitorPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Signals detected, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -205,7 +206,7 @@ export default function MonitorPage() {
             </div>
           </div>
           <div className="frow rev" id="feed">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Into the account feed
               </span>
@@ -230,7 +231,7 @@ export default function MonitorPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Signal activity log, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -297,7 +298,7 @@ export default function MonitorPage() {
       />
       <section className="sec" aria-labelledby="fq-h">
         <div className="w fq">
-          <div>
+          <div data-reveal>
             <span className="kick">
               FAQ
             </span>
@@ -305,7 +306,7 @@ export default function MonitorPage() {
               Questions about Monitor.
             </h2>
           </div>
-          <div className="fqd">
+          <div className="fqd" data-reveal style={{ "--rd": "100ms" } as CSSProperties}>
             <details>
               <summary>
                 Do monitors use research units?
@@ -339,7 +340,7 @@ export default function MonitorPage() {
           </div>
         </div>
       </section>
-      <nav className="w related" aria-label="More solutions">
+      <nav className="w related" data-reveal aria-label="More solutions">
         <Link href="/discover">
           <span>
             ← Previous
@@ -358,7 +359,7 @@ export default function MonitorPage() {
         </Link>
       </nav>
       <section className="cta-band dk" aria-labelledby="cta-h">
-        <div className="w">
+        <div className="w" data-reveal>
           <h2 id="cta-h">
             Never miss the change that makes an account relevant.
           </h2>

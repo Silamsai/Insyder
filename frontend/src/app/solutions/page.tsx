@@ -54,10 +54,10 @@ export default function SolutionsPage() {
       </section>
       <section className="sec" id="workflows" aria-labelledby="wf-h">
         <div className="w">
-          <span className="kick">
+          <span className="kick" data-reveal>
             Workflows
           </span>
-          <h2 className="h2" id="wf-h">
+          <h2 className="h2" id="wf-h" data-reveal>
             From first signal to first meeting.
           </h2>
           <SolutionCards />
@@ -65,13 +65,13 @@ export default function SolutionsPage() {
       </section>
       <section aria-labelledby="bt-h">
         <div className="w">
-          <span className="kick">
+          <span className="kick" data-reveal>
             By team
           </span>
-          <h2 className="h2" id="bt-h">
+          <h2 className="h2" id="bt-h" data-reveal>
             Built for every role.
           </h2>
-          <div className="sol" id="leaders">
+          <div className="sol" data-reveal id="leaders">
             <div>
               <span className="kick">
                 Sales leaders
@@ -135,7 +135,7 @@ export default function SolutionsPage() {
               </div>
             </div>
           </div>
-          <div className="sol" id="sellers">
+          <div className="sol" data-reveal id="sellers">
             <div>
               <span className="kick">
                 {"SDRs & AEs"}
@@ -199,7 +199,7 @@ export default function SolutionsPage() {
               </div>
             </div>
           </div>
-          <div className="sol" id="researchers">
+          <div className="sol" data-reveal id="researchers">
             <div>
               <span className="kick">
                 Researchers
@@ -263,7 +263,7 @@ export default function SolutionsPage() {
               </div>
             </div>
           </div>
-          <div className="sol" id="revops">
+          <div className="sol" data-reveal id="revops">
             <div>
               <span className="kick">
                 RevOps
@@ -327,7 +327,7 @@ export default function SolutionsPage() {
               </div>
             </div>
           </div>
-          <div className="sol" id="agencies">
+          <div className="sol" data-reveal id="agencies">
             <div>
               <span className="kick">
                 {"Agencies & MSPs"}
@@ -391,7 +391,7 @@ export default function SolutionsPage() {
               </div>
             </div>
           </div>
-          <div className="sol" id="partners">
+          <div className="sol" data-reveal id="partners">
             <div>
               <span className="kick">
                 Channel partners
@@ -458,7 +458,7 @@ export default function SolutionsPage() {
         </div>
       </section>
       <section className="cta-band dk" aria-labelledby="cta-h">
-        <div className="w">
+        <div className="w" data-reveal>
           <h2 id="cta-h">
             See how your team would use it.
           </h2>

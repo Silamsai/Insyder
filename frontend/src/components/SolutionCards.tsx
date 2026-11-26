@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 type Card = { href: string; title: string; text: string; cta: string; icon: ReactNode };
 
@@ -113,7 +113,13 @@ export default function SolutionCards() {
   return (
     <div className="solgrid">
       {cards.map((c, i) => (
-        <Link key={c.title} className="solcard" href={c.href}>
+        <Link
+          key={c.title}
+          className="solcard"
+          href={c.href}
+          data-reveal
+          style={{ "--rd": `${(i % 3) * 90}ms` } as CSSProperties}
+        >
           <div className="sc-top">
             <span className="sc-n">{String(i + 1).padStart(2, "0")}</span>
             <span className="sc-icw">{c.icon}</span>

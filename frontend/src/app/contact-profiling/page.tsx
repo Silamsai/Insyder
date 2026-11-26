@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import AnchorLink from "@/components/AnchorLink";
@@ -48,7 +49,7 @@ export default function ContactProfilingPage() {
       <section aria-label="Contact profiling in detail">
         <div className="w">
           <div className="frow" id="find">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Find decision makers
               </span>
@@ -73,7 +74,7 @@ export default function ContactProfilingPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
                 <Image
                   src="/decision-makers.jpeg"
@@ -87,7 +88,7 @@ export default function ContactProfilingPage() {
             </div>
           </div>
           <div className="frow rev" id="roles">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Roles to find
               </span>
@@ -109,7 +110,7 @@ export default function ContactProfilingPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
                 <Image
                   src="/roles-to-find.png"
@@ -123,7 +124,7 @@ export default function ContactProfilingPage() {
             </div>
           </div>
           <div className="frow" id="hypothesis">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Role hypothesis
               </span>
@@ -148,7 +149,7 @@ export default function ContactProfilingPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
                 <Image
                   src="/role-hypothesis.jpeg"
@@ -162,7 +163,7 @@ export default function ContactProfilingPage() {
             </div>
           </div>
           <div className="frow rev" id="notes">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Meeting notes
               </span>
@@ -184,7 +185,7 @@ export default function ContactProfilingPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" style={{
                 padding: "0",
                 overflow: "hidden",
@@ -219,7 +220,7 @@ export default function ContactProfilingPage() {
       />
       <section className="sec" aria-labelledby="fq-h">
         <div className="w fq">
-          <div>
+          <div data-reveal>
             <span className="kick">
               FAQ
             </span>
@@ -227,7 +228,7 @@ export default function ContactProfilingPage() {
               Questions about Contact profiling.
             </h2>
           </div>
-          <div className="fqd">
+          <div className="fqd" data-reveal style={{ "--rd": "100ms" } as CSSProperties}>
             <details>
               <summary>
                 Are contacts verified?
@@ -261,7 +262,7 @@ export default function ContactProfilingPage() {
           </div>
         </div>
       </section>
-      <nav className="w related" aria-label="More solutions">
+      <nav className="w related" data-reveal aria-label="More solutions">
         <Link href="/accounts">
           <span>
             ← Previous
@@ -280,7 +281,7 @@ export default function ContactProfilingPage() {
         </Link>
       </nav>
       <section className="cta-band dk" aria-labelledby="cta-h">
-        <div className="w">
+        <div className="w" data-reveal>
           <h2 id="cta-h">
             Walk into every first meeting prepared.
           </h2>

@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 /** Step icons. Each animates only while its card is hovered (see .steps-pro rules in globals.css). */
 const icons = {
@@ -183,7 +183,7 @@ export default function HowItWorks({ title, lead, steps }: { title: string; lead
   return (
     <section className="sec dk steps-sec" aria-labelledby="st-h">
       <div className="w">
-        <div className={lead ? "steps-head" : undefined}>
+        <div className={lead ? "steps-head" : undefined} data-reveal>
           <div>
             <span className="kick">How it works</span>
             <h2 className="h2" id="st-h">
@@ -194,7 +194,7 @@ export default function HowItWorks({ title, lead, steps }: { title: string; lead
         </div>
         <ol className="steps-pro">
           {steps.map((s, i) => (
-            <li key={s.title}>
+            <li key={s.title} data-reveal style={{ "--rd": `${i * 90}ms` } as CSSProperties}>
               <div className="sp-top">
                 <span className="sp-n">{String(i + 1).padStart(2, "0")}</span>
                 <span className="sp-icw">

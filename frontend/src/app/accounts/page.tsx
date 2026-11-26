@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import HowItWorks from "@/components/HowItWorks";
 
@@ -49,7 +50,7 @@ export default function AccountsPage() {
       <section aria-label="Accounts in detail">
         <div className="w">
           <div className="frow" id="watchlist">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 {"Watchlist & imports"}
               </span>
@@ -74,7 +75,7 @@ export default function AccountsPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Account intelligence, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -142,7 +143,7 @@ export default function AccountsPage() {
             </div>
           </div>
           <div className="frow rev" id="brief">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Account brief
               </span>
@@ -167,7 +168,7 @@ export default function AccountsPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Northbridge Manufacturing, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -222,7 +223,7 @@ export default function AccountsPage() {
             </div>
           </div>
           <div className="frow" id="qualify">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Qualify a lead
               </span>
@@ -247,7 +248,7 @@ export default function AccountsPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Qualification brief, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -302,7 +303,7 @@ export default function AccountsPage() {
             </div>
           </div>
           <div className="frow rev" id="acceptance">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Sales acceptance
               </span>
@@ -327,7 +328,7 @@ export default function AccountsPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Sales acceptance, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -395,7 +396,7 @@ export default function AccountsPage() {
             </div>
           </div>
           <div className="frow" id="pipeline">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 {"Pipeline & CRM"}
               </span>
@@ -420,7 +421,7 @@ export default function AccountsPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Opportunity pipeline, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -483,7 +484,7 @@ export default function AccountsPage() {
       />
       <section className="sec" aria-labelledby="fq-h">
         <div className="w fq">
-          <div>
+          <div data-reveal>
             <span className="kick">
               FAQ
             </span>
@@ -491,7 +492,7 @@ export default function AccountsPage() {
               Questions about Accounts.
             </h2>
           </div>
-          <div className="fqd">
+          <div className="fqd" data-reveal style={{ "--rd": "100ms" } as CSSProperties}>
             <details>
               <summary>
                 What is the priority score?
@@ -525,7 +526,7 @@ export default function AccountsPage() {
           </div>
         </div>
       </section>
-      <nav className="w related" aria-label="More solutions">
+      <nav className="w related" data-reveal aria-label="More solutions">
         <Link href="/monitor">
           <span>
             ← Previous
@@ -544,7 +545,7 @@ export default function AccountsPage() {
         </Link>
       </nav>
       <section className="cta-band dk" aria-labelledby="cta-h">
-        <div className="w">
+        <div className="w" data-reveal>
           <h2 id="cta-h">
             Give sales fewer, better accounts.
           </h2>

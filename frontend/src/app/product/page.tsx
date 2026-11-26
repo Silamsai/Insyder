@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -49,7 +50,7 @@ export default function ProductPage() {
       <section aria-label="Product overview">
         <div className="w">
           <div style={{ paddingTop: "72px" }}>
-            <div className="frame-wrap">
+            <div className="frame-wrap" data-reveal>
               <Image
                 src="/discover.png"
                 alt="Insyder Discover screen, Choose leads step: four companies found, each with its signal, date, sources and a score out of 100, ready to assign to a researcher."
@@ -62,7 +63,7 @@ export default function ProductPage() {
             </div>
           </div>
           <div className="frow" id="discover">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Discover
               </span>
@@ -84,7 +85,7 @@ export default function ProductPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
                 <Image
                   src="/find-and-assign.png"
@@ -103,7 +104,7 @@ export default function ProductPage() {
             </div>
           </div>
           <div className="frow rev" id="monitor">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Monitor
               </span>
@@ -125,7 +126,7 @@ export default function ProductPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
                 <Image
                   src="/signal-monitors.jpeg"
@@ -144,7 +145,7 @@ export default function ProductPage() {
             </div>
           </div>
           <div className="frow" id="accounts">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Accounts
               </span>
@@ -166,7 +167,7 @@ export default function ProductPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Northbridge Manufacturing, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -213,7 +214,7 @@ export default function ProductPage() {
             </div>
           </div>
           <div className="frow rev" id="contacts">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Contact profiling
               </span>
@@ -235,7 +236,7 @@ export default function ProductPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
                 <Image
                   src="/decision-makers.jpeg"
@@ -254,7 +255,7 @@ export default function ProductPage() {
             </div>
           </div>
           <div className="frow" id="outreach">
-            <div className="ftxt">
+            <div className="ftxt" data-reveal>
               <span className="kick">
                 Outreach
               </span>
@@ -276,7 +277,7 @@ export default function ProductPage() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
               <div className="pnl" role="img" aria-label="Tasks, sample data">
                 <div aria-hidden="true">
                   <div className="pnl-h">
@@ -325,7 +326,7 @@ export default function ProductPage() {
         </div>
       </section>
       <section className="cta-band dk" aria-labelledby="cta-h">
-        <div className="w">
+        <div className="w" data-reveal>
           <h2 id="cta-h">
             See every step on accounts like yours.
           </h2>

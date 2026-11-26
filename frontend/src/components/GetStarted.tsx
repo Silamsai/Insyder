@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { IconType } from "react-icons";
 import { FiDatabase, FiGlobe, FiLayers, FiUsers } from "react-icons/fi";
 
@@ -35,7 +36,7 @@ export default function GetStarted() {
   return (
     <section className="sec gs" aria-labelledby="go-h" style={{ paddingTop: "0" }}>
       <div className="w">
-        <div style={{ maxWidth: "820px" }}>
+        <div style={{ maxWidth: "820px" }} data-reveal>
           <span className="kick">Get started</span>
           <h2 className="h2" id="go-h">
             Start with your website.
@@ -49,7 +50,7 @@ export default function GetStarted() {
           {steps.map(({ title, text, Icon, tone }, i) => {
             const n = String(i + 1).padStart(2, "0");
             return (
-              <li key={title} className="gs-card">
+              <li key={title} className="gs-card" data-reveal style={{ "--rd": `${i * 90}ms` } as CSSProperties}>
                 <div className="gs-top">
                   <span className="gs-n">{n}</span>
                   <span className={`gs-ic ${tone}`}>
