@@ -7,6 +7,13 @@ const nextConfig: NextConfig = {
   experimental: {
     cpus: 1,
   },
+  /* Old Plans URLs now live under Pricing */
+  async redirects() {
+    return [
+      { source: "/plans", destination: "/pricing", permanent: true },
+      { source: "/plans/:path*", destination: "/pricing/:path*", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;
