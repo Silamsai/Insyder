@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import SolutionCards from "@/components/SolutionCards";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/solutions",
   title: "Insyder — Solutions",
   description: "Five connected workflows and how each team in the revenue organisation uses Insyder.",
-};
+});
 
 export default function SolutionsPage() {
   return (
