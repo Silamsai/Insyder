@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import LegalPage, { type LegalSection } from "@/components/LegalPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/privacy",
   title: "Insyder — Privacy policy",
   description: "How Insyder collects, uses and protects personal information.",
-};
+});
 
 // Draft content: replace with your reviewed policy before launch.
 const sections: LegalSection[] = [

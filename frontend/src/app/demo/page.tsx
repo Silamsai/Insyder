@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import DemoForm from "@/components/DemoForm";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/demo",
   title: "Insyder — Book a demo",
   description: "Book a 30-minute Insyder demo shaped around what you sell and who you sell to.",
-};
+});
 
 export default function DemoPage() {
   return (

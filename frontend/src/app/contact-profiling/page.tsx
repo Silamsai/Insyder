@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/contact-profiling",
   title: "Insyder — Contact profiling",
   description: "Find the IT and technology decision makers at an account, each with a source. Then prepare for every conversation with a role hypothesis.",
-};
+});
 
 export default function ContactProfilingPage() {
   return (

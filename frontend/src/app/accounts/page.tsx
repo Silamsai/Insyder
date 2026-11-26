@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/accounts",
   title: "Insyder — Accounts",
   description: "Your target accounts with their research status, buying signals, qualification brief and deals. From watchlist to sales acceptance to CRM.",
-};
+});
 
 export default function AccountsPage() {
   return (
