@@ -21,7 +21,7 @@ export const plans: Plan[] = [
   {
     key: "starter",
     name: "Starter",
-    price: 20,
+    price: 40,
     blurb: "For a small team getting started with signal-led prospecting.",
     researchUnits: 100,
     workspaces: 1,
@@ -31,7 +31,7 @@ export const plans: Plan[] = [
   {
     key: "growth",
     name: "Growth",
-    price: 40,
+    price: 80,
     blurb: "For a sales team with researchers, reviewers and SDRs working together.",
     researchUnits: 250,
     workspaces: 3,
@@ -42,7 +42,7 @@ export const plans: Plan[] = [
   {
     key: "enterprise",
     name: "Enterprise",
-    price: 60,
+    price: 150,
     blurb: "For larger teams, agencies and partners running several workspaces.",
     researchUnits: 500,
     workspaces: 6,
