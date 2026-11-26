@@ -93,8 +93,8 @@ export default function DiscoverPage() {
                 <Image
                   src="/describe-companies.png"
                   alt="Describe the companies you're looking for: search type, playbook, criteria, countries"
-                  width={1002}
-                  height={676}
+                  width={2004}
+                  height={1396}
                   sizes="(max-width: 980px) 100vw, 560px"
                   style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
                 />
@@ -125,54 +125,152 @@ export default function DiscoverPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Search type, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Search type
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
+              <div style={{
+                background: "#ffffff",
+                border: "1px solid #E2E8F0",
+                borderRadius: "14px",
+                padding: "22px 24px 20px",
+                boxShadow: "0 24px 60px -20px rgba(13,27,42,.12)",
+                maxWidth: "460px",
+                margin: "0 auto",
+                fontFamily: "var(--font-schibsted), sans-serif"
+              }}>
+                {/* Header */}
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: "700", fontSize: "14.5px", color: "#0D1B2A" }}>
+                    <span style={{ display: "inline-block", width: "7px", height: "7px", borderRadius: "50%", background: "#0D1B2A" }}></span>
+                    Search type
+                  </div>
+                  <span style={{ fontFamily: "var(--font-geist-mono), monospace", fontSize: "10.5px", fontWeight: "700", color: "#0E6B67", letterSpacing: "0.06em" }}>
+                    STEP 1 OF 4
+                  </span>
+                </div>
+
+                {/* Option 1: Quick search (Active) */}
+                <div style={{
+                  border: "1.5px solid #0E6B67",
+                  background: "#F2FBF9",
+                  borderRadius: "10px",
+                  padding: "14px 16px",
+                  marginBottom: "10px",
+                  position: "relative"
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "5px" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                      <div style={{
+                        width: "16px",
+                        height: "16px",
+                        borderRadius: "50%",
+                        border: "4px solid #0E6B67",
+                        background: "#ffffff",
+                        boxSizing: "border-box"
+                      }} />
+                      <span style={{ fontWeight: "700", fontSize: "14px", color: "#0D1B2A" }}>
+                        Quick search
+                      </span>
+                    </div>
+                    <span style={{
+                      background: "#0E6B67",
+                      color: "#ffffff",
+                      fontSize: "9.5px",
+                      fontWeight: "700",
+                      fontFamily: "var(--font-geist-mono), monospace",
+                      padding: "2px 7px",
+                      borderRadius: "4px",
+                      letterSpacing: "0.04em"
+                    }}>
+                      ACTIVE
                     </span>
                   </div>
-                  <div className="row2">
-                    <div>
-                      Quick search
-                      <small>
-                        Takes seconds · up to 10 results
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Selected
-                      </span>
+                  <p style={{ fontSize: "12.5px", color: "#4A5568", margin: "0 0 10px 26px", lineHeight: "1.4" }}>
+                    Finds recent articles about companies with a buying signal. Takes seconds, up to 10 results.
+                  </p>
+                  <div style={{ display: "flex", gap: "6px", marginLeft: "26px", flexWrap: "wrap" }}>
+                    <span style={{ background: "#ffffff", border: "1px solid #D1EAE5", color: "#0E6B67", fontSize: "11px", fontWeight: "600", padding: "2px 8px", borderRadius: "4px" }}>
+                      ⚡ Takes seconds
+                    </span>
+                    <span style={{ background: "#ffffff", border: "1px solid #D1EAE5", color: "#0E6B67", fontSize: "11px", fontWeight: "600", padding: "2px 8px", borderRadius: "4px" }}>
+                      Up to 10 results
+                    </span>
+                    <span style={{ background: "#ffffff", border: "1px solid #D1EAE5", color: "#0E6B67", fontSize: "11px", fontWeight: "600", padding: "2px 8px", borderRadius: "4px" }}>
+                      1 research unit
                     </span>
                   </div>
-                  <div className="row2">
-                    <div>
-                      Build a list
-                      <small>
-                        Takes a few minutes · up to 25 companies
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        Option
+                </div>
+
+                {/* Option 2: Build a list */}
+                <div style={{
+                  border: "1px solid #E2E8F0",
+                  background: "#ffffff",
+                  borderRadius: "10px",
+                  padding: "14px 16px",
+                  marginBottom: "16px"
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "5px" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                      <div style={{
+                        width: "16px",
+                        height: "16px",
+                        borderRadius: "50%",
+                        border: "1.5px solid #CBD5E1",
+                        background: "#ffffff",
+                        boxSizing: "border-box"
+                      }} />
+                      <span style={{ fontWeight: "700", fontSize: "14px", color: "#0D1B2A" }}>
+                        Build a list
                       </span>
+                    </div>
+                    <span style={{
+                      background: "#F1F5F9",
+                      color: "#64748B",
+                      fontSize: "9.5px",
+                      fontWeight: "700",
+                      fontFamily: "var(--font-geist-mono), monospace",
+                      padding: "2px 7px",
+                      borderRadius: "4px",
+                      letterSpacing: "0.04em"
+                    }}>
+                      DEEP CHECK
                     </span>
                   </div>
-                  <div className="row2">
-                    <div>
-                      History
-                      <small>
-                        8 previous searches
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        8
-                      </span>
+                  <p style={{ fontSize: "12.5px", color: "#4A5568", margin: "0 0 10px 26px", lineHeight: "1.4" }}>
+                    Builds a list of companies and checks each one against your signals, with sources. Takes a few minutes.
+                  </p>
+                  <div style={{ display: "flex", gap: "6px", marginLeft: "26px", flexWrap: "wrap" }}>
+                    <span style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", color: "#64748B", fontSize: "11px", fontWeight: "600", padding: "2px 8px", borderRadius: "4px" }}>
+                      ⏱ 3–5 minutes
                     </span>
+                    <span style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", color: "#64748B", fontSize: "11px", fontWeight: "600", padding: "2px 8px", borderRadius: "4px" }}>
+                      Up to 25 companies
+                    </span>
+                  </div>
+                </div>
+
+                {/* History Section */}
+                <div style={{ borderTop: "1px solid #F1F5F9", paddingTop: "14px" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
+                    <span style={{ fontSize: "11px", fontWeight: "700", fontFamily: "var(--font-geist-mono), monospace", color: "#64748B", letterSpacing: "0.05em" }}>
+                      RECENT SEARCH HISTORY
+                    </span>
+                    <span style={{ fontSize: "11px", color: "#0E6B67", fontWeight: "600" }}>
+                      8 searches saved
+                    </span>
+                  </div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "12px", background: "#F8FAFC", padding: "8px 12px", borderRadius: "6px" }}>
+                      <div>
+                        <span style={{ fontWeight: "600", color: "#0D1B2A" }}>UK universities data centres</span>
+                        <span style={{ display: "block", fontSize: "11px", color: "#64748B" }}>10 leads · 2 hours ago</span>
+                      </div>
+                      <span style={{ fontSize: "10px", fontWeight: "600", background: "#E6F5F3", color: "#0E6B67", padding: "2px 6px", borderRadius: "4px" }}>Quick</span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "12px", background: "#F8FAFC", padding: "8px 12px", borderRadius: "6px" }}>
+                      <div>
+                        <span style={{ fontWeight: "600", color: "#0D1B2A" }}>Healthcare facility EHR migration</span>
+                        <span style={{ display: "block", fontSize: "11px", color: "#64748B" }}>24 leads · Yesterday</span>
+                      </div>
+                      <span style={{ fontSize: "10px", fontWeight: "600", background: "#F1F5F9", color: "#475569", padding: "2px 6px", borderRadius: "4px" }}>List</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -209,8 +307,8 @@ export default function DiscoverPage() {
                 <Image
                   src="/playbooks.png"
                   alt="Signal playbooks: Infrastructure expansion, Hiring demand, Multi-site IT support"
-                  width={1002}
-                  height={502}
+                  width={2004}
+                  height={1032}
                   sizes="(max-width: 980px) 100vw, 560px"
                   style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
                 />

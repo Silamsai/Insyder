@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import type { CSSProperties } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = pageMeta({
@@ -78,69 +79,15 @@ export default function AccountsPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Account intelligence, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Account intelligence
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Northbridge Manufacturing
-                      <small>
-                        Tier 1 · accepted · qualified
-                      </small>
-                    </div>
-                    <span>
-                      <b>
-                        86
-                      </b>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Halden Cold Chain
-                      <small>
-                        Tier 1 · accepted
-                      </small>
-                    </div>
-                    <span>
-                      <b>
-                        78
-                      </b>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Fenmoor College
-                      <small>
-                        Tier 1 · in review
-                      </small>
-                    </div>
-                    <span>
-                      <b>
-                        74
-                      </b>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Arkwright Components
-                      <small>
-                        Tier 2 · draft
-                      </small>
-                    </div>
-                    <span>
-                      <b>
-                        64
-                      </b>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/accounts-watchlist.png"
+                  alt="Accounts watchlist showing target accounts sorted by priority score with tier and research status"
+                  width={1494}
+                  height={963}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -171,56 +118,15 @@ export default function AccountsPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Northbridge Manufacturing, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Northbridge Manufacturing
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      New production facility announced
-                      <small>
-                        Expansion · 14 Oct 2026
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Reviewed
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      IT Infrastructure Lead role
-                      <small>
-                        Infra hiring · 03 Nov 2026
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        Not reviewed
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Regional hub consolidation
-                      <small>
-                        Compute · 18 Aug 2026
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd a">
-                        Stale
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/account-brief.png"
+                  alt="Account brief showing detected signals with source, date and review status"
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -251,56 +157,15 @@ export default function AccountsPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Qualification brief, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Qualification brief
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Workload / use case
-                      <small>
-                        New production lines need site systems
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd i">
-                        Observed
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Buying timeframe
-                      <small>
-                        Before opening · date disputed
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd a">
-                        Inferred
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Deployment model
-                      <small>
-                        Critical question for the meeting
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        Unknown
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/qualification-brief.png"
+                  alt="Qualification brief showing use case, buying timeframe and deployment model with confidence levels"
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -331,69 +196,15 @@ export default function AccountsPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Sales acceptance, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Sales acceptance
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Draft
-                      <small>
-                        Being researched
-                      </small>
-                    </div>
-                    <span>
-                      <b>
-                        9
-                      </b>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Ready for review
-                      <small>
-                        Waiting for a decision
-                      </small>
-                    </div>
-                    <span>
-                      <b>
-                        2
-                      </b>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Needs research
-                      <small>
-                        Returned with a reason
-                      </small>
-                    </div>
-                    <span>
-                      <b>
-                        1
-                      </b>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Accepted
-                      <small>
-                        Owner and next action set
-                      </small>
-                    </div>
-                    <span>
-                      <b>
-                        7
-                      </b>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/sales-acceptance.png"
+                  alt="Sales acceptance workflow showing Draft, Ready for review, Needs research and Accepted status counts"
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -424,52 +235,15 @@ export default function AccountsPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Opportunity pipeline, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Opportunity pipeline
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Northbridge Manufacturing
-                      <small>
-                        Accepted · Qualified · Priya Shah
-                      </small>
-                    </div>
-                    <span>
-                      27 Nov
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Halden Cold Chain
-                      <small>
-                        Accepted · Contacted · £60,000
-                      </small>
-                    </div>
-                    <span>
-                      24 Nov
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Kestrel Data Services
-                      <small>
-                        New · no deal yet
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd r">
-                        Overdue
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/opportunity-pipeline.png"
+                  alt="Opportunity pipeline showing accepted accounts with deal stage, owner and CRM sync status"
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>

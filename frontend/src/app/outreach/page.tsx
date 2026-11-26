@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import type { CSSProperties } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = pageMeta({
@@ -75,56 +76,15 @@ export default function OutreachPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="All tasks, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      All tasks
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Northbridge Manufacturing
-                      <small>
-                        Research · Tom Reed · due 22 Nov
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd a">
-                        In progress
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Halden Cold Chain
-                      <small>
-                        Email · Sam Okafor · due 24 Nov
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        Open
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Kestrel Data Services
-                      <small>
-                        Research · Tom Reed · due 18 Nov
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd r">
-                        Overdue
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/team-tasks.png"
+                  alt="Team tasks list showing research and email tasks with status, owner and due dates"
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -155,56 +115,15 @@ export default function OutreachPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Research task, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Research task
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      1 · Review the evidence
-                      <small>
-                        Mark supporting items as reviewed
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Done
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      2 · Write a note
-                      <small>
-                        For the reviewer
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Done
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      3 · Send to sales reviewer
-                      <small>
-                        Ana Costa
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd i">
-                        Ready
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/task-instructions.png"
+                  alt="Research task showing step-by-step checklist: review evidence, write note, send to sales reviewer"
+                  width={1394}
+                  height={1088}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -235,56 +154,15 @@ export default function OutreachPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Drafts, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Drafts
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Email · Helen Marsh
-                      <small>
-                        Opens with the open site-readiness decision
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd a">
-                        For review
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      LinkedIn note · Owen Clarke
-                      <small>
-                        References the new facility
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd a">
-                        For review
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Drafts waiting
-                      <small>
-                        Reviewed evidence attached
-                      </small>
-                    </div>
-                    <span>
-                      <b>
-                        3
-                      </b>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/outreach-drafts.png"
+                  alt="Outreach drafts showing email and LinkedIn note drafts generated from reviewed evidence"
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -315,43 +193,15 @@ export default function OutreachPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Partner handoffs, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Partner handoffs
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Halden Cold Chain
-                      <small>
-                        Regional partner
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        Prepared
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Fenmoor College
-                      <small>
-                        Follow up 2 Dec
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Shared
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/partner-handoffs.png"
+                  alt="Partner handoffs showing accepted accounts prepared for external fulfilment with follow-up dates"
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
