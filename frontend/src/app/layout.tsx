@@ -2,11 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Schibsted_Grotesk } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-<<<<<<< HEAD
 import { SITE_NAME, SITE_URL, jsonLdScript, organizationJsonLd } from "@/lib/seo";
-=======
 import ScrollReveal from "@/components/ScrollReveal";
->>>>>>> f55f55d43c531382d0cadaf829d9575f0289b6cb
 import "./globals.css";
 
 // Self-hosted by Next.js at build time, so every visitor gets the same fonts

@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-<<<<<<< HEAD
 import { faqJsonLd, jsonLdScript, pageMeta } from "@/lib/seo";
-=======
 import type { CSSProperties } from "react";
->>>>>>> f55f55d43c531382d0cadaf829d9575f0289b6cb
 import Image from "next/image";
 import Link from "next/link";
 import GetStarted from "@/components/GetStarted";
@@ -378,8 +375,7 @@ export default function HomePage() {
               Good questions.
             </h2>
           </div>
-<<<<<<< HEAD
-          <div className="fqd">
+          <div className="fqd" data-reveal style={{ "--rd": "100ms" } as CSSProperties}>
             {faqs.map(({ q, a }) => (
               <details key={q}>
                 <summary>{q}</summary>
@@ -388,59 +384,6 @@ export default function HomePage() {
                 </div>
               </details>
             ))}
-=======
-          <div className="fqd" data-reveal style={{ "--rd": "100ms" } as CSSProperties}>
-            <details>
-              <summary>
-                What does Insyder do?
-              </summary>
-              <div className="a">
-                <p>
-                  It finds companies showing the changes your offer depends on, keeps the evidence behind each one, finds the people who decide and prepares a role hypothesis for each, then hands sales-accepted accounts to your CRM.
-                </p>
-              </div>
-            </details>
-            <details>
-              <summary>
-                Does a signal mean a company is ready to buy?
-              </summary>
-              <div className="a">
-                <p>
-                  No. A signal is a reason to ask a good question. Insyder keeps observations, inferences and confirmed answers separate so nobody mistakes one for the other.
-                </p>
-              </div>
-            </details>
-            <details>
-              <summary>
-                Is a role hypothesis a personality profile?
-              </summary>
-              <div className="a">
-                <p>
-                  No. It describes a professional role and how it likely works. Every point is a working hypothesis to check in conversation, and it lists what it doesn’t know.
-                </p>
-              </div>
-            </details>
-            <details>
-              <summary>
-                Which CRMs does it work with?
-              </summary>
-              <div className="a">
-                <p>
-                  HubSpot and Salesforce. Only sales-accepted accounts are sent, existing records are updated instead of duplicated, and opted-out contacts are never sent.
-                </p>
-              </div>
-            </details>
-            <details>
-              <summary>
-                Is this an outsourced SDR service?
-              </summary>
-              <div className="a">
-                <p>
-                  No. Insyder is software your team runs. Your people choose the accounts, judge the evidence and own every decision.
-                </p>
-              </div>
-            </details>
->>>>>>> f55f55d43c531382d0cadaf829d9575f0289b6cb
           </div>
         </div>
       </section>

@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-<<<<<<< HEAD
 import { pageMeta } from "@/lib/seo";
-=======
 import type { CSSProperties } from "react";
->>>>>>> f55f55d43c531382d0cadaf829d9575f0289b6cb
 import Link from "next/link";
 
 export const metadata: Metadata = pageMeta({
