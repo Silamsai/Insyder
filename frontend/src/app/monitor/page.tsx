@@ -154,56 +154,15 @@ export default function MonitorPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Signals detected, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Signals detected
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Server refresh tender · Fenmoor College
-                      <small>
-                        Hardware refresh · discovered 16 Nov
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd r">
-                        Material change
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Reliability engineer role · Kestrel Data Services
-                      <small>
-                        Infrastructure hiring · discovered 16 Nov
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd r">
-                        Material change
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      New depot approved · Halden Cold Chain
-                      <small>
-                        Expansion · discovered 14 Nov
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd r">
-                        Material change
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/signals-detected.jpeg"
+                  alt="Signals detected list showing hardware refresh, hiring change and expansion signals with discovery dates"
+                  width={1600}
+                  height={800}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
             </div>
           </div>
@@ -234,55 +193,85 @@ export default function MonitorPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Signal activity log, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Signal activity log
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
+              <div style={{
+                background: "#ffffff",
+                border: "1px solid #E2E8F0",
+                borderRadius: "14px",
+                padding: "20px 22px 24px",
+                boxShadow: "0 24px 60px -20px rgba(13,27,42,.12)",
+                maxWidth: "340px",
+                margin: "0 auto",
+                fontFamily: "var(--font-schibsted), sans-serif"
+              }}>
+                {/* Header */}
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: "700", fontSize: "14.5px", color: "#0D1B2A" }}>
+                    <span style={{ display: "inline-block", width: "7px", height: "7px", borderRadius: "50%", background: "#0D1B2A" }}></span>
+                    Signal activity log
                   </div>
-                  <div className="row2">
-                    <div>
-                      Northbridge Manufacturing
-                      <small>
-                        IT vacancy names the new site
-                      </small>
+                  <span style={{ fontFamily: "var(--font-geist-mono), monospace", fontSize: "10.5px", fontWeight: "700", color: "#0E6B67", letterSpacing: "0.06em" }}>
+                    MONITORS
+                  </span>
+                </div>
+
+                {/* Timeline item 1 */}
+                <div style={{ position: "relative", paddingLeft: "26px", paddingBottom: "20px" }}>
+                  {/* Vertical track line */}
+                  <div style={{ position: "absolute", left: "9px", top: "18px", bottom: "0", width: "1px", background: "#E2E8F0" }}></div>
+                  {/* Icon badge */}
+                  <div style={{
+                    position: "absolute", left: "0", top: "1px", width: "19px", height: "19px", borderRadius: "50%",
+                    background: "#F0FDF4", border: "1px solid #BBF7D0", display: "flex", alignItems: "center", justifyContent: "center",
+                    color: "#16A34A"
+                  }}>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+                    </svg>
+                  </div>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "8px", marginBottom: "4px" }}>
+                    <div style={{ fontSize: "13px", fontWeight: "700", color: "#0D1B2A", lineHeight: "1.3" }}>
+                      VP, Enterprise Procurement <span style={{ fontWeight: "400", color: "#4A5568" }}>at Premierinc</span>
                     </div>
-                    <span>
-                      <span className="bd r">
-                        Material change
-                      </span>
-                    </span>
+                    <span style={{ fontSize: "11px", color: "#718096", whiteSpace: "nowrap", flexShrink: 0 }}>22 hours ago</span>
                   </div>
-                  <div className="row2">
-                    <div>
-                      Arkwright Components
-                      <small>
-                        Infrastructure engineer role
-                      </small>
+                  <p style={{ fontSize: "12px", color: "#4A5568", lineHeight: "1.45", margin: "0 0 8px" }}>
+                    The Vice President, Enterprise Procurement is responsible for leading and executing a unified procurement strategy across all...
+                  </p>
+                  <span style={{
+                    display: "inline-block", background: "#E6F5F3", color: "#0E6B67", fontSize: "9.5px", fontWeight: "700",
+                    fontFamily: "var(--font-geist-mono), monospace", padding: "2.5px 7px", borderRadius: "4px", letterSpacing: "0.04em"
+                  }}>
+                    MATERIAL CHANGE
+                  </span>
+                </div>
+
+                {/* Timeline item 2 */}
+                <div style={{ position: "relative", paddingLeft: "26px" }}>
+                  {/* Icon badge */}
+                  <div style={{
+                    position: "absolute", left: "0", top: "1px", width: "19px", height: "19px", borderRadius: "50%",
+                    background: "#F0FDF4", border: "1px solid #BBF7D0", display: "flex", alignItems: "center", justifyContent: "center",
+                    color: "#16A34A"
+                  }}>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+                    </svg>
+                  </div>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "8px", marginBottom: "4px" }}>
+                    <div style={{ fontSize: "13px", fontWeight: "700", color: "#0D1B2A", lineHeight: "1.3" }}>
+                      The Gate and the Wave: Boston&apos;s Three Longwood Megaprojects
                     </div>
-                    <span>
-                      <span className="bd r">
-                        Material change
-                      </span>
-                    </span>
+                    <span style={{ fontSize: "11px", color: "#718096", whiteSpace: "nowrap", flexShrink: 0 }}>22 hours ago</span>
                   </div>
-                  <div className="row2">
-                    <div>
-                      Monitored changes
-                      <small>
-                        Last 30 days
-                      </small>
-                    </div>
-                    <span>
-                      <b>
-                        18
-                      </b>
-                    </span>
-                  </div>
+                  <p style={{ fontSize: "12px", color: "#4A5568", lineHeight: "1.45", margin: "0 0 8px" }}>
+                    Spaulding Rehabilitation Hospital in the Charlestown Navy Yard, opened in 2013, set its first floor 30 inches above the 500-year...
+                  </p>
+                  <span style={{
+                    display: "inline-block", background: "#E6F5F3", color: "#0E6B67", fontSize: "9.5px", fontWeight: "700",
+                    fontFamily: "var(--font-geist-mono), monospace", padding: "2.5px 7px", borderRadius: "4px", letterSpacing: "0.04em"
+                  }}>
+                    MATERIAL CHANGE
+                  </span>
                 </div>
               </div>
             </div>
