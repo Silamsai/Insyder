@@ -170,49 +170,21 @@ export default function ProductPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Northbridge Manufacturing, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Northbridge Manufacturing
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      New production facility
-                      <small>
-                        Expansion · 14 Oct 2026
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd t">
-                        Reviewed
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Priority
-                      <small>
-                        Fit, timing and evidence
-                      </small>
-                    </div>
-                    <span>
-                      <b>
-                        86
-                      </b>
-                    </span>
-                  </div>
-                  <p style={{ marginTop: "12px", fontSize: "13px", color: "#566070" }}>
-                    <Link href="/accounts" style={{ color: "#0E6B67", fontWeight: "600" }}>
-                      More on Accounts →
-                    </Link>
-                  </p>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/accounts-watchlist.png"
+                  alt="Accounts watchlist showing target accounts with priority score, tier and research status"
+                  width={1494}
+                  height={963}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
+              <p style={{ marginTop: "12px", fontSize: "13px", color: "#566070" }}>
+                <Link href="/accounts" style={{ color: "#0E6B67", fontWeight: "600" }}>
+                  More on Accounts →
+                </Link>
+              </p>
             </div>
           </div>
           <div className="frow rev" id="contacts">
@@ -280,49 +252,21 @@ export default function ProductPage() {
               </ul>
             </div>
             <div data-reveal style={{ "--rd": "120ms" } as CSSProperties}>
-              <div className="pnl" role="img" aria-label="Tasks, sample data">
-                <div aria-hidden="true">
-                  <div className="pnl-h">
-                    <b>
-                      Tasks
-                    </b>
-                    <span className="tag" style={{ margin: "0" }}>
-                      Sample data
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Northbridge Manufacturing
-                      <small>
-                        Research · due 22 Nov
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd a">
-                        In progress
-                      </span>
-                    </span>
-                  </div>
-                  <div className="row2">
-                    <div>
-                      Halden Cold Chain
-                      <small>
-                        Email · due 24 Nov
-                      </small>
-                    </div>
-                    <span>
-                      <span className="bd">
-                        Open
-                      </span>
-                    </span>
-                  </div>
-                  <p style={{ marginTop: "12px", fontSize: "13px", color: "#566070" }}>
-                    <Link href="/outreach" style={{ color: "#0E6B67", fontWeight: "600" }}>
-                      More on Outreach →
-                    </Link>
-                  </p>
-                </div>
+              <div className="pnl" style={{ padding: "0", overflow: "hidden", background: "transparent", border: "0", boxShadow: "0 24px 60px -20px rgba(13,27,42,.15)" }}>
+                <Image
+                  src="/team-tasks.png"
+                  alt="Team tasks list showing research and email tasks with status, owner and due dates"
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 980px) 100vw, 560px"
+                  style={{ display: "block", width: "100%", height: "auto", borderRadius: "14px" }}
+                />
               </div>
+              <p style={{ marginTop: "12px", fontSize: "13px", color: "#566070" }}>
+                <Link href="/outreach" style={{ color: "#0E6B67", fontWeight: "600" }}>
+                  More on Outreach →
+                </Link>
+              </p>
             </div>
           </div>
         </div>
