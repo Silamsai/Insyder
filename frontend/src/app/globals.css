@@ -140,7 +140,7 @@ a{color:#7FD3CB}a:hover{color:#fff}
 .why p{font-size:15.5px;line-height:1.5}
 
 /* role hypothesis spotlight */
-.rh-intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:56px;align-items:end;margin-bottom:44px}
+.rh-intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:56px;align-items:center;margin-bottom:44px}
 .facts{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.16)}
 .facts li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:15px}
 .facts li span:first-child{color:#8FA2B5}
