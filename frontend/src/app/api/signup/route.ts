@@ -2,6 +2,7 @@
 // chosen plan and returns its URL. The account is only created after Stripe confirms payment.
 import { portalFetch, PortalUnavailable } from "@/lib/portal";
 import { planByKey } from "@/components/plans";
+import { SHOW_PRICING } from "@/lib/features";
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const FIELDS = { plan: 20, name: 120, email: 200, phone: 40, companyName: 200, website: 300 } as const;
@@ -10,6 +11,8 @@ const UNAVAILABLE = "Sorry, sign-up isn't available right now. Please try again 
 const fail = (error: string, status = 400) => Response.json({ error }, { status });
 
 export async function POST(req: Request) {
+  // Pricing hidden for demos (see lib/features.ts): no sign-ups or payments
+  if (!SHOW_PRICING) return fail("Sign-up isn't available right now. Please book a demo instead.", 404);
   const body = (await req.json().catch(() => null)) as Record<string, unknown> | null;
   if (!body || typeof body !== "object") return fail("Invalid request.");
 

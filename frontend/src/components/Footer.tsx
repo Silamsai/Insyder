@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { productLinks } from "./nav";
+import { SHOW_PRICING } from "@/lib/features";
 
 const groups: { title: string; links: { href: string; label: string }[] }[] = [
   { title: "Product", links: productLinks },
@@ -9,7 +10,7 @@ const groups: { title: string; links: { href: string; label: string }[] }[] = [
     title: "Company",
     links: [
       { href: "/about", label: "About" },
-      { href: "/pricing", label: "Pricing" },
+      ...(SHOW_PRICING ? [{ href: "/pricing", label: "Pricing" }] : []),
       { href: "/demo", label: "Book a demo" },
     ],
   },
