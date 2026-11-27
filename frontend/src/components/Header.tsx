@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import Logo from "./Logo";
 import { PORTAL_LOGIN_URL, productLinks } from "./nav";
+import { SHOW_PRICING } from "@/lib/features";
 
 export default function Header() {
   const pathname = usePathname();
@@ -102,9 +103,11 @@ export default function Header() {
           <Link href="/solutions" className={pathname === "/solutions" ? "cur" : undefined} aria-current={cur("/solutions")}>
             Solutions by Teams
           </Link>
-          <Link href="/pricing" className={pathname.startsWith("/pricing") ? "cur" : undefined} aria-current={cur("/pricing")}>
-            Pricing
-          </Link>
+          {SHOW_PRICING && (
+            <Link href="/pricing" className={pathname.startsWith("/pricing") ? "cur" : undefined} aria-current={cur("/pricing")}>
+              Pricing
+            </Link>
+          )}
         </nav>
         <div className="hd-r">
           <a className="btn b-ln" style={{ minHeight: "44px" }} href={PORTAL_LOGIN_URL} target="_blank" rel="noopener noreferrer">
@@ -135,7 +138,7 @@ export default function Header() {
           </Link>
         ))}
         <Link className="ml" href="/solutions" aria-current={cur("/solutions")}>Solutions by Teams</Link>
-        <Link className="ml" href="/pricing" aria-current={cur("/pricing")}>Pricing</Link>
+        {SHOW_PRICING && <Link className="ml" href="/pricing" aria-current={cur("/pricing")}>Pricing</Link>}
         <a className="btn b-ln" href={PORTAL_LOGIN_URL} target="_blank" rel="noopener noreferrer">Sign in</a>
         <Link className="btn b-hi" href="/demo" style={{ marginTop: "6px" }}>Book a demo</Link>
       </nav>
